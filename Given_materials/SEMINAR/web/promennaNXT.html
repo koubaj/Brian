@@ -1,0 +1,80 @@
+<html>
+<!-- Created on: 6/29/2010 -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Návod na programování v NXT-G</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Unregistered User">
+  <meta name="generator" content="AceHTML Freeware">  
+  <link rel="stylesheet" href="seminarRobot.css" type="text/css">
+</head>
+<body>
+		<div id="hlavicka">	 
+		<p>Robotický seminá&#345; </p>
+	   </div>
+	
+		<div id="hlavni">
+		   </br>	 
+	 	   <h2> <u>Prom&#283;nná v NXT - G</u></h2>			
+		   
+		   <h3> <u>Práce s prom&#283;nnými </u></h3> 	
+   
+ 							    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Prom&#283;nou si m&#367;&#382;ete p&#345;edstavit
+								 jako místo pro ulo&#382;ení hodnoty ve vestav&#283;né pam&#283;ti NXT kostky. 
+								 Programovací bloky mohou p&#345;e&#269;íst, ale i m&#283;nit prom&#283;nnou aktuální 
+								 hodnotu p&#345;ipojením k bloku s datovými spojeními.  
+  
+ 
+ <h3> <u>Vytvo&#345;ení prom&#283;nné </u></h3> 	
+ <ol>
+ 							   <li>Chcete-li vytvo&#345;it prom&#283;nnou, tak musíte kliknout na roletovou nabídku 
+							  <i> Edit</i> a vybrat podnabídku <i>Define Variable</i>. Otev&#345;e se okno, které má název<i> Edit Variables</i>.
+							    V sekci List je uvedeno jméno a typ p&#345;eddefinovaných prom&#283;nných.
+								 Pro vytvo&#345;ení nové prom&#283;nné klikn&#283;te na tla&#269;ítko <i>Create</i> 
+								 a získáte p&#345;istup do sekce <i>Name</i>, kde do textového pole napi&scaron;te název
+								  nové prom&#283;nné a v sekci <i>Data Type</i> vyberte z roletového seznamu typ prom&#283;nné.
+								   Prom&#283;nná m&#367;&#382;e být typu text, &#269;íslo nebo logická. </li>	   </br>
+							<li>P&#345;etáhn&#283;te <i>Variable</i> blok z programovací palety na programovací plochu.  
+							                V konfigura&#269;ním panelu v sekci List kliknutím vyberte prom&#283;nnou,
+											 kterou budete chtít pou&#382;ít. </li>	</br>
+								<li>V sekci<i> Action</i> m&#367;&#382;ete vybrat &#269;tení &ndash; <i>Read</i> nebo zápis &ndash;
+								 <i>Write</i> do prom&#283;nné. Výb&#283;rem mo&#382;nosti <i>Write</i> lze v pr&#367;b&#283;hu
+								  &#269;asu m&#283;nit hodnotu prom&#283;nné p&#345;epsáním její aktuální hodnoty novou informací.
+								   Pokud  to chcete ud&#283;lat, tak musíte vytvo&#345;it datové spojení do vstupní 
+								   zástr&#269;ky v <i>data hub</i> nabídce, které p&#345;inese nové informace. Pokud chcete pouze 
+								   &#269;íst konstantní hodnotu z bloku <i>Variable</i>, tak v sekci Action vyberte mo&#382;nost <i>Write</i>,
+								    aby se vám zp&#345;ístupnila sekce<i> Value</i>, kde pomocí &scaron;ipek nahoru nebo dol&#367;
+									 m&#367;&#382;ete nastavit po&#382;adovanou &#269;íselnou hodnotu. Kdy&#382; nechcete
+									  klikat na &scaron;ipky, tak sta&#269;í kliknout do textového pole a po&#382;adovanou 
+									  hodnotu napsat p&#345;ímo z klávesnice. Pokud se jedná o prom&#283;nnou typu text, tak 
+									  do textového pole napí&scaron;ete po&#382;adovaný text a v p&#345;ípad&#283; 
+									  logické prom&#283;nné vyberete p&#345;epína&#269;em hodnotu        
+									  <i>True</i> - pravda nebo <i>False</i> &ndash; nepravda. Pak ji&#382; sta&#269;í zpátky 
+									  p&#345;epnout na mo&#382;nost<i> Read</i>. Dejte si pozor, kdy&#382; by bylo do vstupní 
+									  zástr&#269;ky p&#345;ipojeno datové spojení a <i>Variable</i> blok by m&#283;l nastavenou 
+									  akci <i>Read</i>, tak nové informace, které by p&#345;icházely datovým spojením,
+									   by m&#283;ly p&#345;ednost p&#345;ed jakoukoliv konstantní hodnotou.</li>  
+ </ol>	
+ 
+  <h3> <u>Pou&#382;ití prom&#283;nné</u></h3> 	
+						   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hodnota prom&#283;nné se m&#367;&#382;e
+  						m&#283;nit v pr&#367;b&#283;hu &#269;asu. Nap&#345;íklad chcete vytvo&#345;it prom&#283;nnou &bdquo;Úrove&#328;
+   						osv&#283;tlení&ldquo; a nastavíte jí po&#269;áte&#269;ní hodnotu 50. Potom vá&scaron; robot, který je vybaven
+  					  sv&#283;telným senzorem, p&#345;ijede na ur&#269;ité místo a zde zaznamená úrove&#328; osv&#283;tlení. 
+						Nabízí se zde p&#345;íle&#382;itost vyu&#382;ití bloku <i>Variable</i>, který musí být nastaven v re&#382;imu <i>Write</i>. 
+							Aby se do n&#283;j nahrála aktuální hodnota osv&#283;tlení v tom daném míst&#283;, tak musí být vytvo&#345;eno 
+					datové spojení z výstupní zástr&#269;ky bloku <i>Light sensor</i> do vstupní zástr&#269;ky bloku <i>Variable</i>. 
+					Pozd&#283;ji ve va&scaron;em programu budete moci pou&#382;ít <i>Variable</i> blok, který musí být nastaven 
+					v re&#382;imu <i>Read</i> a pomocí datového spojení mezi výstupní zástr&#269;kou a vstupní zástr&#269;kou 
+					jiného bloku budete moci p&#345;istoupit k nahrané hodnot&#283; úrovn&#283; osv&#283;tlení.	</br>
+					
+									   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      Data hub nabídky bloku<i> Variable</i> se rozbalí
+									    automaticky, kdy&#382; je umíst&#283;n               
+										   na programovací plochu. Pokud chcete p&#345;e&#269;íst aktuální hodnotu z bloku,
+										    tak musíte vytvo&#345;it datové spojení z výstupní zástr&#269;ky. 
+											Kdy&#382; budete chtít zapsat novou informaci do prom&#283;nné, tak musíte
+											 vytvo&#345;it spojení do vstupní zástr&#269;ky bloku <i>Variable</i>.	
+
+</body>
+</html>

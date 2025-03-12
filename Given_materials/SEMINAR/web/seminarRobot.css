@@ -1,0 +1,58 @@
+@charset "windows-1250";
+
+/* Selektory */
+p {font-family: Arial, sans-serif; font-size: 80 px;} 
+
+h1 {color: red; text-align: center;}
+
+h2 {color:red; text-align: left;}
+
+a {text-decoration: none;}
+a:link {color: #CC0000;}
+a:visited {color:#FFCC00;}
+a:active {color: black;}
+a:hover {color: #FF3300; text-decoration: underline; position: relative; top: 1px;}
+
+/* Identifikator  - hlavicka stranky */	
+#hlavicka {
+height: 130px;
+width: 790px;
+padding: 10px;
+margin: 0 auto;
+margin-top: 7px;
+/*margin-bottom: 7px;*/	
+background:#FFFFCC;
+/*background-image: url(head_cs.jpg); */
+border:1px solid #040f60;
+/*position: absolute; left: 100px; top: 0px;*/
+color: #CC0000;
+text-align: center;
+}
+
+/* hlavni cast stranky */
+#hlavni {
+height: auto;
+width: 790px;
+padding: 3px;
+/*margin-top: 7px;*/ 
+margin: auto;
+margin-bottom: 7px;
+border:1px solid #040f60;
+/*position: absolute; left: 100px; top: 0px;*/
+text-align: left;
+color: #040f60;
+}
+
+
+#cerveny-obdelnik {
+height: 20px;
+width: 300px;
+padding: 3px;
+margin-top: 7px;
+margin-bottom: 7px;
+margin: 0 auto;
+background:#fec1c1;
+border:1px solid #f9282d;
+text-align: center;
+color: #f9282d;
+}

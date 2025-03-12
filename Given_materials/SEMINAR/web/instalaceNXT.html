@@ -1,0 +1,149 @@
+<html>
+<!-- Created on: 6/25/2010 -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Návod na programování v NXT-G</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Unregistered User">
+  <meta name="generator" content="AceHTML Freeware">
+  <link rel="stylesheet" href="seminarRobot.css" type="text/css">
+</head>
+<body>
+	<div id="hlavicka">
+	<p>Robotický seminá&#345; </p>
+	</div>
+	
+	<div id="hlavni">
+		  </br>
+		  <h2> <u>Instalace a první spu&scaron;t&#283;ní</u></h2> 
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V následujícím textu se budu pouze zabývat programem LEGO MINDSTORMS NXT 
+		  ve verzi 2.0 - výuková verze. Instala&#269;ní balí&#269;ek mi zap&#367;j&#269;il 
+		  vedoucí bakalá&#345;ské práce, pan Ing. Martin Hlinovský, Ph.D. K dispozici je CD, 
+		  kterým lze provést instalaci na opera&#269;ním systému Microsoft Windows. Na druhém CD 
+		  je NXT u&#382;ivatelská p&#345;íru&#269;ka. Dále balí&#269;ek obsahuje DVD, pomocí n&#283;ho&#382; 
+		  program lze nainstalovat na po&#269;íta&#269;ích se systémem Apple Macintosh. Já jsem provedl instalaci 
+		  na svém notebooku se 64 bitovým opera&#269;ním systémem Windows 7 Home Premium. </br> </br>
+		  
+		  <h3> <u>Systémové po&#382;adavky</u></h3>
+		  <ul>
+		  	<li> <b>Microsoft Windows</b> </br>
+			       - Windows XP Professional nebo Home Edition se Service Packem 2 nebo nov&#283;j&scaron;í </br>
+				   - procesor Intel® Pentium® nebo kompatibilní, minimáln&#283; 800 MHz (doporu&#269;eno    
+				   1,5 GHz nebo lep&scaron;í) </br>
+				   - Windows Vista Service Pack 1 nebo nov&#283;j&scaron;í </br>
+				   - procesor Intel® Pentium® nebo kompatibilní, minimáln&#283; 1 GHz (doporu&#269;eno 1,5 GHz nebo lep&scaron;í)</br>
+				   - CD-ROM mechanika </br>
+				   - opera&#269;ní pam&#283;&#357;: 512 MB RAM &ndash; minimáln&#283; </br>
+				   - alespo&#328; 700 MB volného místa na pevném disku </br>
+				   - XGA displej (1024x768)</br>
+				   - 1 USB port</br>
+				   - kompatibilní Bluetooth adaptér &ndash; podporované programy pro Bluetooth jsou Widcomm Bluetooth
+				    pro Windows ve verzi nov&#283;j&scaron;í ne&#382; v. 1.4.2.10 SP5, Bluetooth &bdquo;stacks&ldquo;  
+					zahrnuté v Microsoft Windows XP se Service Packem 2 nebo Service Packem 3, Windows Vista nebo Vista 
+					Service Pack 1</li> </br> </br>  
+			 <li> <b>Apple Macintosh</b> </br>
+			       - Apple MacOS X verze 10.3.9, 10.4 nebo 10.5 </br> 
+				   - Power PC® G3,G4, G5 procesor, minimáln&#283; 600 MHz  (doporu&#269;eno 1.3 GHz nebo lep&scaron;í) </br> 
+				   - Apple MacOS X verze 10.4 nebo 10.5 </br>
+				   - procesor Intel </br>
+				   - DVD mechanika </br>
+				   - aspo&#328; 700 MB volného místa na pevném disku </br>
+				   - XGA displej (1024x768)</br>
+				   - 1 USB port</br>
+				   - kompatibilní Bluetooth adaptér - , Bluetooth &bdquo;stacks&ldquo;  zahrnuté v Apple MacOS X 10.3.9, 10.4 a 10.5</li> </br>	</br>	
+		  </ul>
+		  
+		  <h3> <u>Instalace</u></h3>
+		  <ol>
+		  		<li>Zav&#345;ete v&scaron;echny otev&#345;ené programy.</li>
+				<li>Vlo&#382;te instala&#269;ní CD do mechaniky va&scaron;eho po&#269;íta&#269;e.</li>
+				<li>Pokud se CD automaticky nena&#269;te, tak na plo&scaron;e dvakrát klikn&#283;te na ikonu &bdquo;M&#367;j po&#269;íta&#269;&ldquo;. 
+				Najd&#283;te disk s názvem &bdquo;Mindstorms® NXT&ldquo; a dvakrát na n&#283;j klikn&#283;te.</li>
+		  		<li>Spustí se úvodní instala&#269;ní okno (Obr. 1), ve kterém si zvolíte jazyk instalace</br> 
+				<center> <img src="obrazky/instal1.png"> </center> 
+		 		<center> <font size="2" color="#000066" face="arial">Obr. 1: Úvodní 
+				instala&#269;ní okno pro výb&#283;r jazyka pou&#382;itého p&#345;i instalaci </font> </center> </br></li> 
+				
+				<li>Já si zvolil angli&#269;tinu. Jaký jazyk si zvolíte vy, je na vás. Kliknutím na tla&#269;ítko                
+				 s p&#345;íslu&scaron;ným jazykem se objeví dal&scaron;í okno (Obr. 2), ve kterém je vid&#283;t 
+				 pr&#367;b&#283;h inicializace instalátoru.
+				<center> <img src="obrazky/instal2.png"> </center> 
+		 		<center> <font size="2" color="#000066" face="arial">Obr. 2: Okno s pr&#367;b&#283;hem na&#269;ítání 
+				dal&scaron;ích komponent </font> </center> </br></li>
+				<li>Jakmile dob&#283;hne &bdquo;zelený indikátor&ldquo;, který je umíst&#283;ný v dolní &#269;ásti okna, 
+				a&#382; na konec, tak se objeví okno (Obr. 3), ve kterém si m&#367;&#382;ete zvolit, jaké &#269;ásti 
+				programu chcete nainstalovat a cílový adresá&#345; pro instalaci. Pokud máte 64 bitový opera&#269;ní systém,
+				 tak ur&#269;it&#283; nechte druhou polo&#382;ku &bdquo;LEGO MINDSTORMS NXT x64 Driver&ldquo; zatrhnutou, 
+				 aby se nainstalovala, jinak by vám pak program nefungoval. Dále se v levé &#269;ásti okna nachází informace
+				  o tom, &#382;e se dané polo&#382;ky nainstalují na místní  pevný disk a kolik je pot&#345;eba volného místa.
+				   Pokud jste spokojeni s p&#345;eddefinovaným cílovým adresá&#345;em &bdquo;C:\Program Files (x86)\LEGO Software\&ldquo;, 
+				   m&#367;&#382;ete kliknout na tla&#269;ítko <i>Next</i>. Pokud nejste spokojeni a chcete zm&#283;nit cílový adresá&#345;, 
+				   tak klikn&#283;te na tla&#269;ítko <i>Browse</i>. Objeví se okno s adresá&#345;ovou strukturou va&scaron;eho 
+				   po&#269;íta&#269;e, kde si zvolíte, kam chcete program nainstalovat. Po navolení klikn&#283;te na 
+				   tla&#269;ítko <i>OK</i>.
+				<center> <img src="obrazky/instal3.png"> </center> 
+		 		<center> <font size="2" color="#000066" face="arial">Obr. 3: Okno s pr&#367;b&#283;hem 
+				na&#269;ítání </font> </center> </br></li>
+				<li>V následujícím okn&#283; (Obr. 4) jsou k p&#345;e&#269;tení licen&#269;ní podmínky. 
+				Pro p&#345;ejití na dal&scaron;í okno je pot&#345;eba souhlasit s licen&#269;ními podmínkami 
+				kliknutím na p&#345;epína&#269; s textem &ldquo;I accept the License Agreement(s)&ldquo;. 
+				Pak ji&#382; m&#367;&#382;ete kliknout na tla&#269;ítko <i>Next</i>. 
+				<center> <img src="obrazky/instal4.png"> </center> 
+		 		<center> <font size="2" color="#000066" face="arial">Obr. 4: Okno s licen&#269;ními 
+				podmínkami </font> </center> </br></li>
+				<li>Objeví se okno (Obr. 5) s p&#345;ehledem, které polo&#382;ky se nainstalují.
+				 Pro p&#345;ejití k samotné instalaci sta&#269;í kliknout op&#283;t na tla&#269;ítko <i>Next</i>.
+				<center> <img src="obrazky/instal5.png"> </center> 
+		 		<center> <font size="2" color="#000066" face="arial">Obr. 5: Okno s p&#345;ehledem 
+				polo&#382;ek pro instalaci </font> </center> </br></li>
+				<li>V následujícím okn&#283; (Obr. 6) je vid&#283;t pr&#367;b&#283;h instalace. 
+				<center> <img src="obrazky/instal6.png"> </center> 
+		 		<center> <font size="2" color="#000066" face="arial">Obr. 6: Okno s pr&#367;b&#283;hem 
+				instalace </font> </center> </br></li>
+				<li>Po &bdquo;dob&#283;hnutí&ldquo; indikátoru pr&#367;b&#283;hu instalace se objeví poslední okno (Obr. 7),
+				           kde m&#367;&#382;ete kliknutím na tla&#269;itko <i>View Readme</i> otev&#345;ít poznámkový blok s informacemi
+						    o práv&#283; nainstalovaném programu. Vedlej&scaron;í velké tla&#269;ítko slou&#382;í k registraci
+							 programu. Pro dokon&#269;ení instalace klikn&#283;te na tla&#269;ítko <i>Finish</i> umíst&#283;né v levém
+							 dolním rohu okna.
+							 <center> <img src="obrazky/instal7.png"> </center> 
+		 		<center> <font size="2" color="#000066" face="arial">Obr. 7: Okno po dokon&#269;ení 
+				instalace </font> </center> </br></li>
+				<li>Po kliknutí na tla&#269;ítko <i>Finish</i> se objeví je&scaron;t&#283; jedno okno, 
+				které vidíte na Obr. 8. P&#345;ed prvním spu&scaron;t&#283;ním programu musíte restartovat 
+				po&#269;íta&#269;, a proto klikn&#283;te na tla&#269;ítko <i>Restart</i>. Pokud chcete restartovat 
+				po&#269;íta&#269; pozd&#283;ji, tak klikn&#283;te na tla&#269;ítko <i>Restart Later</i>. 
+				Pro instalaci hardwaru musíte nejprve vypnout po&#269;íta&#269;. To se vykoná po kliknutí 
+				na prost&#345;ední tla&#269;ítko <i>Shut Down</i>. 
+				<center> <img src="obrazky/instal8.png"> </center> 
+		 		<center> <font size="2" color="#000066" face="arial">Obr. 8: Okno pro 
+				dokon&#269;ení instalace </font> </center> </br> </br></li>
+				
+		  </ol>																													   
+		  	
+		  <h3> <u>Spu&scaron;t&#283;ní</u></h3>
+		  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Po úsp&#283;&scaron;n&#283; dokon&#269;ené instalaci 
+			a restartování po&#269;íta&#269;e se na pracovní plo&scaron;e va&scaron;eho monitoru 
+			budou nacházet dv&#283; nové ikony. Ikona s názvem <i>&bdquo;NXT 2.0 Programming&ldquo;</i> slou&#382;í
+			 ke spu&scaron;t&#283;ní programu LEGO MINDSTORMS NXT, ve kterém budete vytvá&#345;et programy 			
+			  pro va&scaron;eho LEGO robota a druhá ikona s názvem <i>&bdquo;NXT 2.0 Data Logging&ldquo;</i> 
+			  je ur&#269;ena ke spu&scaron;t&#283;ní programu, který slou&#382;í pro záznam dat. </br>
+			  
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dvojím klinutím na první zmín&#283;nou ikonu dojde 
+			  ke spu&scaron;t&#283;ní programu. V prost&#345;ední &#269;ásti obrazovky se nachází úvodní okno s dv&#283;ma animovanými 
+			  pr&#367;vodci <i>Getting Started</i> a <i>System Overview</i> (Obr. 9). Pr&#367;vodce <i>Getting Started</i> poskytuje 
+			  rychlý návod na vytvo&#345;ení programu a dal&scaron;í práci s ním. Druhý pr&#367;vodce <i>System Overview</i> 
+			  stru&#269;n&#283; popisuje jednotlivé &#269;ásti NXT programovacího prost&#345;edí. Pod t&#283;mito pr&#367;vodci 
+			  jsou dv&#283; sekce. První z nich slou&#382;í pro vytvo&#345;ení nového programu a druhá pro otev&#345;ení 
+			  nedávno vytvo&#345;ených program&#367;.</br>
+			  <center> <img src="obrazky/pruvodceGSSO.png"> </center> 
+		 	  <center> <font size="2" color="#000066" face="arial">Obr. 9: Pr&#367;vodce Getting Started a
+			   System Overview </font> </center> </br>
+			   
+			   <h3> <u>Popis jednotlivých &#269;ástí programu naleznete <a href="popisNXT.html">ZDE</a> </u> </h3>
+			  
+		  
+	</div>
+
+</body>
+</html>
