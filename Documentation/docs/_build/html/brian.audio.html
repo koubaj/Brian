@@ -54,7 +54,7 @@
 <li class="toctree-l4"><a class="reference internal" href="brian.uicontrol.html">brian.uicontrol package</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="brian.html#module-contents">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brian.html#module-brian">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -89,8 +89,29 @@
              
   <section id="brian-audio-package">
 <h1>brian.audio package<a class="headerlink" href="#brian-audio-package" title="Link to this heading"></a></h1>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-brian.audio">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-brian.audio" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.audio.play_tone">
+<span class="sig-prename descclassname"><span class="pre">brian.audio.</span></span><span class="sig-name descname"><span class="pre">play_tone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.audio.play_tone" title="Link to this definition"></a></dt>
+<dd><p>Play a sine tone to the audio output.
+This method returns instantly and the tone is played in the background.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tone</strong> – Frequency in Hz to play.</p></li>
+<li><p><strong>duration_ms</strong> – How long should the tone last</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.audio.stop_tone">
+<span class="sig-prename descclassname"><span class="pre">brian.audio.</span></span><span class="sig-name descname"><span class="pre">stop_tone</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brian.audio.stop_tone" title="Link to this definition"></a></dt>
+<dd><p>If tone is playing because of previous call to <cite>play_tone</cite>, it is stopped early.</p>
+</dd></dl>
+
 </section>
 </section>
 

@@ -53,7 +53,7 @@
 <li class="toctree-l4 current"><a class="current reference internal" href="#">brian.uicontrol package</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="brian.html#module-contents">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brian.html#module-brian">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -91,11 +91,407 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="brian-uicontrol-uieventslistener-module">
-<h2>brian.uicontrol.UiEventsListener module<a class="headerlink" href="#brian-uicontrol-uieventslistener-module" title="Link to this heading"></a></h2>
+<section id="module-brian.uicontrol.UiEventsListener">
+<span id="brian-uicontrol-uieventslistener-module"></span><h2>brian.uicontrol.UiEventsListener module<a class="headerlink" href="#module-brian.uicontrol.UiEventsListener" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.uicontrol.UiEventsListener.</span></span><span class="sig-name descname"><span class="pre">UiEventsListener</span></span><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.Button">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Button</span></span><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Button" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.Button.last_button_event">
+<span class="sig-name descname"><span class="pre">last_button_event</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent" title="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent"><span class="pre">ButtonEvent</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Button.last_button_event" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.Button.wait_for_press">
+<span class="sig-name descname"><span class="pre">wait_for_press</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Button.wait_for_press" title="Link to this definition"></a></dt>
+<dd><p>Waits for next button press event.
+This function is blocking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – Maximum number of milliseconds to wait.
+- If the timeout is negative, the function will wait indefinitely.</p>
+</dd>
+<dt class="field-even">Return success<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p>True: If the desired button event was caught.</p></li>
+<li><p>False: If the timeout ran out.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.Button.wait_for_press_and_release">
+<span class="sig-name descname"><span class="pre">wait_for_press_and_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Button.wait_for_press_and_release" title="Link to this definition"></a></dt>
+<dd><p>Waits for next button press and release event.
+This function is blocking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – Maximum number of milliseconds to wait.
+- If the timeout is negative, the function will wait indefinitely.</p>
+</dd>
+<dt class="field-even">Return success<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p>True: If the desired button event was caught.</p></li>
+<li><p>False: If the timeout ran out.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.Button.wait_for_release">
+<span class="sig-name descname"><span class="pre">wait_for_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Button.wait_for_release" title="Link to this definition"></a></dt>
+<dd><p>Waits for next button release event.
+This function is blocking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – Maximum number of milliseconds to wait.
+- If the timeout is negative, the function will wait indefinitely.</p>
+</dd>
+<dt class="field-even">Return success<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p>True: If the desired button event was caught.</p></li>
+<li><p>False: If the timeout ran out.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ButtonEvent</span></span><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent.is_pressed">
+<span class="sig-name descname"><span class="pre">is_pressed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent.is_pressed" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent.just_pressed">
+<span class="sig-name descname"><span class="pre">just_pressed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent.just_pressed" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent.just_released">
+<span class="sig-name descname"><span class="pre">just_released</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent.just_released" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ButtonsEvent</span></span><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent.any_button">
+<span class="sig-name descname"><span class="pre">any_button</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent" title="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent"><span class="pre">ButtonEvent</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent.any_button" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent.any_button_incl_knob">
+<span class="sig-name descname"><span class="pre">any_button_incl_knob</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent" title="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent"><span class="pre">ButtonEvent</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent.any_button_incl_knob" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent.bottom_left">
+<span class="sig-name descname"><span class="pre">bottom_left</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent" title="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent"><span class="pre">ButtonEvent</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent.bottom_left" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent.bottom_right">
+<span class="sig-name descname"><span class="pre">bottom_right</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent" title="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent"><span class="pre">ButtonEvent</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent.bottom_right" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent.top_left">
+<span class="sig-name descname"><span class="pre">top_left</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent" title="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent"><span class="pre">ButtonEvent</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent.top_left" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent.top_right">
+<span class="sig-name descname"><span class="pre">top_right</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent" title="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonEvent"><span class="pre">ButtonEvent</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent.top_right" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.Knob">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Knob</span></span><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Knob" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Button" title="brian.uicontrol.UiEventsListener.UiEventsListener.Button"><code class="xref py py-class docutils literal notranslate"><span class="pre">Button</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.Knob.last_button_event">
+<span class="sig-name descname"><span class="pre">last_button_event</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent" title="brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent"><span class="pre">KnobEvent</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Knob.last_button_event" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.Knob.wait_for_any_turn">
+<span class="sig-name descname"><span class="pre">wait_for_any_turn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Knob.wait_for_any_turn" title="Link to this definition"></a></dt>
+<dd><p>Waits for next any turn of the knob.
+This function is blocking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – Maximum number of milliseconds to wait.
+- If the timeout is negative, the function will wait indefinitely.</p>
+</dd>
+<dt class="field-even">Return success<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p>True: If the desired button event was caught.</p></li>
+<li><p>False: If the timeout ran out.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.Knob.wait_for_directional_turn">
+<span class="sig-name descname"><span class="pre">wait_for_directional_turn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clockwise</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Knob.wait_for_directional_turn" title="Link to this definition"></a></dt>
+<dd><p>Waits for next directional turn of the knob.
+This function is blocking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clockwise</strong> – Whether to wait for clockwise or counterclockwise turn.</p></li>
+<li><p><strong>timeout_ms</strong> – Maximum number of milliseconds to wait.
+- If the timeout is negative, the function will wait indefinitely.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return success<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p>True: If the desired button event was caught.</p></li>
+<li><p>False: If the timeout ran out.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">KnobEvent</span></span><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent.is_pressed">
+<span class="sig-name descname"><span class="pre">is_pressed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent.is_pressed" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent.just_pressed">
+<span class="sig-name descname"><span class="pre">just_pressed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent.just_pressed" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent.just_released">
+<span class="sig-name descname"><span class="pre">just_released</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent.just_released" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent.turn_delta">
+<span class="sig-name descname"><span class="pre">turn_delta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent.turn_delta" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent.turned_to">
+<span class="sig-name descname"><span class="pre">turned_to</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent.turned_to" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.any_button">
+<span class="sig-name descname"><span class="pre">any_button</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Button" title="brian.uicontrol.UiEventsListener.UiEventsListener.Button"><span class="pre">Button</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.any_button" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.any_button_incl_knob">
+<span class="sig-name descname"><span class="pre">any_button_incl_knob</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Button" title="brian.uicontrol.UiEventsListener.UiEventsListener.Button"><span class="pre">Button</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.any_button_incl_knob" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.bottom_left_button">
+<span class="sig-name descname"><span class="pre">bottom_left_button</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Button" title="brian.uicontrol.UiEventsListener.UiEventsListener.Button"><span class="pre">Button</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.bottom_left_button" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.bottom_right_button">
+<span class="sig-name descname"><span class="pre">bottom_right_button</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Button" title="brian.uicontrol.UiEventsListener.UiEventsListener.Button"><span class="pre">Button</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.bottom_right_button" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.buttons_event_since_last">
+<span class="sig-name descname"><span class="pre">buttons_event_since_last</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent" title="brian.uicontrol.UiEventsListener.UiEventsListener.ButtonsEvent"><span class="pre">ButtonsEvent</span></a></span></span><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.buttons_event_since_last" title="Link to this definition"></a></dt>
+<dd><p>This function will reset just_pressed and just_released fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ButtonsEvent class of events that happened since last call.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.knob">
+<span class="sig-name descname"><span class="pre">knob</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Knob" title="brian.uicontrol.UiEventsListener.UiEventsListener.Knob"><span class="pre">Knob</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.knob" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.knob_event_since_last">
+<span class="sig-name descname"><span class="pre">knob_event_since_last</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent" title="brian.uicontrol.UiEventsListener.UiEventsListener.KnobEvent"><span class="pre">KnobEvent</span></a></span></span><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.knob_event_since_last" title="Link to this definition"></a></dt>
+<dd><p>This function will reset just_pressed, just_released fields and turn_delta fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>KnobEvent class of events that happened since last call.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.top_left_button">
+<span class="sig-name descname"><span class="pre">top_left_button</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Button" title="brian.uicontrol.UiEventsListener.UiEventsListener.Button"><span class="pre">Button</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.top_left_button" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListener.UiEventsListener.top_right_button">
+<span class="sig-name descname"><span class="pre">top_right_button</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Button" title="brian.uicontrol.UiEventsListener.UiEventsListener.Button"><span class="pre">Button</span></a></em><a class="headerlink" href="#brian.uicontrol.UiEventsListener.UiEventsListener.top_right_button" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-brian.uicontrol">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-brian.uicontrol" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.uicontrol.ButtonId">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.uicontrol.</span></span><span class="sig-name descname"><span class="pre">ButtonId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.uicontrol.ButtonId" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="brian.sensors.EV3.html#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Enum" title="enum.Enum"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.ButtonId.BOTTOM_LEFT">
+<span class="sig-name descname"><span class="pre">BOTTOM_LEFT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#brian.uicontrol.ButtonId.BOTTOM_LEFT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.ButtonId.BOTTOM_RIGHT">
+<span class="sig-name descname"><span class="pre">BOTTOM_RIGHT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#brian.uicontrol.ButtonId.BOTTOM_RIGHT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.ButtonId.KNOB">
+<span class="sig-name descname"><span class="pre">KNOB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#brian.uicontrol.ButtonId.KNOB" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.ButtonId.TOP_LEFT">
+<span class="sig-name descname"><span class="pre">TOP_LEFT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#brian.uicontrol.ButtonId.TOP_LEFT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.ButtonId.TOP_RIGHT">
+<span class="sig-name descname"><span class="pre">TOP_RIGHT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#brian.uicontrol.ButtonId.TOP_RIGHT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.uicontrol.LedButtonAnimation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.uicontrol.</span></span><span class="sig-name descname"><span class="pre">LedButtonAnimation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.uicontrol.LedButtonAnimation" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="brian.sensors.EV3.html#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Enum" title="enum.Enum"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a></p>
+<p>Constants for selecting behavior of button LEDs. Only in use when LED animations are handled by Brian OS.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.LedButtonAnimation.OFF">
+<span class="sig-name descname"><span class="pre">OFF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#brian.uicontrol.LedButtonAnimation.OFF" title="Link to this definition"></a></dt>
+<dd><p>LED is fully off</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.LedButtonAnimation.SELECTABLE">
+<span class="sig-name descname"><span class="pre">SELECTABLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#brian.uicontrol.LedButtonAnimation.SELECTABLE" title="Link to this definition"></a></dt>
+<dd><p>LED is pulsing at medium brightness level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.LedButtonAnimation.SELECTED">
+<span class="sig-name descname"><span class="pre">SELECTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#brian.uicontrol.LedButtonAnimation.SELECTED" title="Link to this definition"></a></dt>
+<dd><p>LED is pulsing at high brightness level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.LedButtonAnimation.STANDBY">
+<span class="sig-name descname"><span class="pre">STANDBY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#brian.uicontrol.LedButtonAnimation.STANDBY" title="Link to this definition"></a></dt>
+<dd><p>LED is pulsing at low brightness level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.LedButtonAnimation.inherit">
+<span class="sig-name descname"><span class="pre">inherit</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#brian.uicontrol.LedButtonAnimation.inherit" title="Link to this definition"></a></dt>
+<dd><p>LED behavior is not set at this level; Behavior of a previous (system) level is used.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.uicontrol.LedColor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.uicontrol.</span></span><span class="sig-name descname"><span class="pre">LedColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">red</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">green</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.uicontrol.LedColor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.LedColor.blue">
+<span class="sig-name descname"><span class="pre">blue</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.uicontrol.LedColor.blue" title="Link to this definition"></a></dt>
+<dd><p>Blue component of the color, in range from 0 to 255. When set to a value outside of this range, the value is clamped</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.LedColor.green">
+<span class="sig-name descname"><span class="pre">green</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.uicontrol.LedColor.green" title="Link to this definition"></a></dt>
+<dd><p>Green component of the color, in range from 0 to 255. When set to a value outside of this range, the value is clamped</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.uicontrol.LedColor.red">
+<span class="sig-name descname"><span class="pre">red</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.uicontrol.LedColor.red" title="Link to this definition"></a></dt>
+<dd><p>Red component of the color, in range from 0 to 255. When set to a value outside of this range, the value is clamped</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="brian.uicontrol.UiEventsListenerAlreadyClosedError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.uicontrol.</span></span><span class="sig-name descname"><span class="pre">UiEventsListenerAlreadyClosedError</span></span><a class="headerlink" href="#brian.uicontrol.UiEventsListenerAlreadyClosedError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Thrown when trying to access closed UiEventsListener</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.uicontrol.enable_knob_rotation_animation">
+<span class="sig-prename descclassname"><span class="pre">brian.uicontrol.</span></span><span class="sig-name descname"><span class="pre">enable_knob_rotation_animation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.uicontrol.enable_knob_rotation_animation" title="Link to this definition"></a></dt>
+<dd><p>If enabled, OS automatically animates the LEDs under the knob when it rotates. The user program starts in the enabled state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enabled</strong> – Whether to animate knob rotation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.uicontrol.set_button_led">
+<span class="sig-prename descclassname"><span class="pre">brian.uicontrol.</span></span><span class="sig-name descname"><span class="pre">set_button_led</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#brian.uicontrol.ButtonId" title="brian.uicontrol.ButtonId"><span class="pre">ButtonId</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Button" title="brian.uicontrol.UiEventsListener.UiEventsListener.Button"><span class="pre">Button</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#brian.uicontrol.UiEventsListener.UiEventsListener.Knob" title="brian.uicontrol.UiEventsListener.UiEventsListener.Knob"><span class="pre">Knob</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">animation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#brian.uicontrol.LedButtonAnimation" title="brian.uicontrol.LedButtonAnimation"><span class="pre">LedButtonAnimation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#brian.uicontrol.LedColor" title="brian.uicontrol.LedColor"><span class="pre">LedColor</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DEFAULT_COLOR_FROM_SETTINGS'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.uicontrol.set_button_led" title="Link to this definition"></a></dt>
+<dd><p>Set desired animation and color for a specific button (target). These settings override the animation requested
+by the <cite>PhysButtonOverlay</cite> and the default os button effect, unless <cite>LedButtonAnimation.inherit</cite> is used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> – Target button to change color. When Using UiEventsListener.any_button and</p>
+</dd>
+</dl>
+<p>UiEventsListener.any_button_incl_knob, all respective buttons change color/animation.
+:param animation: Target animation.
+:param color: Target color. When unfilled default color from settings is used.</p>
+</dd></dl>
+
 </section>
 </section>
 

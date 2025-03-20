@@ -54,7 +54,7 @@
 <li class="toctree-l4"><a class="reference internal" href="brian.uicontrol.html">brian.uicontrol package</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="brian.html#module-contents">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brian.html#module-brian">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -90,8 +90,66 @@
              
   <section id="brian-motors-motor-limits-package">
 <h1>brian.motors.motor_limits package<a class="headerlink" href="#brian-motors-motor-limits-package" title="Link to this heading"></a></h1>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-brian.motors.motor_limits">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-brian.motors.motor_limits" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.motors.motor_limits.MotorLimits">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.motors.motor_limits.</span></span><span class="sig-name descname"><span class="pre">MotorLimits</span></span><a class="headerlink" href="#brian.motors.motor_limits.MotorLimits" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class to manage and configure the limits of a motor.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.motors.motor_limits.MotorLimits.acceleration">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acceleration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.motors.motor_limits.MotorLimits.acceleration" title="Link to this definition"></a></dt>
+<dd><p>Query the maximum acceleration limit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Maximum acceleration in degrees per second squared.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.motors.motor_limits.MotorLimits.battery_power">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">battery_power</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.motors.motor_limits.MotorLimits.battery_power" title="Link to this definition"></a></dt>
+<dd><p>Query the power draw limit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Battery power consumption limit, in milli-watts.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.motors.motor_limits.MotorLimits.torque">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">torque</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.motors.motor_limits.MotorLimits.torque" title="Link to this definition"></a></dt>
+<dd><p>Query the torque limit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Maximum torque that will be applied to the motor axle, in milli-newton-meters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="brian.motors.motor_limits.UNLIMITED_ACCELERATION">
+<span class="sig-prename descclassname"><span class="pre">brian.motors.motor_limits.</span></span><span class="sig-name descname"><span class="pre">UNLIMITED_ACCELERATION</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.motors.motor_limits.UNLIMITED_ACCELERATION" title="Link to this definition"></a></dt>
+<dd><p>Maximum available acceleration limit (disables speed ramping)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="brian.motors.motor_limits.UNLIMITED_POWER">
+<span class="sig-prename descclassname"><span class="pre">brian.motors.motor_limits.</span></span><span class="sig-name descname"><span class="pre">UNLIMITED_POWER</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.motors.motor_limits.UNLIMITED_POWER" title="Link to this definition"></a></dt>
+<dd><p>Maximum available power limit</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="brian.motors.motor_limits.UNLIMITED_TORQUE">
+<span class="sig-prename descclassname"><span class="pre">brian.motors.motor_limits.</span></span><span class="sig-name descname"><span class="pre">UNLIMITED_TORQUE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.motors.motor_limits.UNLIMITED_TORQUE" title="Link to this definition"></a></dt>
+<dd><p>Maximum available torque limit</p>
+</dd></dl>
+
 </section>
 </section>
 

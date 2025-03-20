@@ -54,7 +54,7 @@
 <li class="toctree-l4"><a class="reference internal" href="brian.uicontrol.html">brian.uicontrol package</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="brian.html#module-contents">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brian.html#module-brian">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -90,8 +90,255 @@
              
   <section id="brian-sensors-sensor-port-probe-package">
 <h1>brian.sensors.sensor_port_probe package<a class="headerlink" href="#brian-sensors-sensor-port-probe-package" title="Link to this heading"></a></h1>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-brian.sensors.sensor_port_probe">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-brian.sensors.sensor_port_probe" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.sensors.sensor_port_probe.</span></span><span class="sig-name descname"><span class="pre">AutoDetect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="brian.sensors.EV3.html#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Enum" title="enum.Enum"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.ANALOG_P1">
+<span class="sig-name descname"><span class="pre">ANALOG_P1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(0,)</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.ANALOG_P1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.ANALOG_P1_HACKER">
+<span class="sig-name descname"><span class="pre">ANALOG_P1_HACKER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.ANALOG_P1_HACKER" title="Link to this definition"></a></dt>
+<dd><p>Force P1 ADC mode, regardless of what AD thinks</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.ANALOG_P6">
+<span class="sig-name descname"><span class="pre">ANALOG_P6</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(2,)</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.ANALOG_P6" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.ANALOG_P6_HACKER">
+<span class="sig-name descname"><span class="pre">ANALOG_P6_HACKER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.ANALOG_P6_HACKER" title="Link to this definition"></a></dt>
+<dd><p>Force P6 ADC mode, regardless of what AD thinks</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.ERROR">
+<span class="sig-name descname"><span class="pre">ERROR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(128,</span> <span class="pre">'</span> <span class="pre">MSB</span> <span class="pre">is</span> <span class="pre">error</span> <span class="pre">flag,</span> <span class="pre">the</span> <span class="pre">rest</span> <span class="pre">can</span> <span class="pre">be</span> <span class="pre">used</span> <span class="pre">as</span> <span class="pre">an</span> <span class="pre">error</span> <span class="pre">code')</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.ERROR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.I2C_100K">
+<span class="sig-name descname"><span class="pre">I2C_100K</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.I2C_100K" title="Link to this definition"></a></dt>
+<dd><p>Some other 3rd party sensors may support only standard I2C speed</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.I2C_400K">
+<span class="sig-name descname"><span class="pre">I2C_400K</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.I2C_400K" title="Link to this definition"></a></dt>
+<dd><p>Most other 3rd party sensors support fast I2C speeds</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.I2C_9K6">
+<span class="sig-name descname"><span class="pre">I2C_9K6</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.I2C_9K6" title="Link to this definition"></a></dt>
+<dd><p>NXT ultrasonic uses bit banging I2C implementation and cannot operate faster than 9600 bits/s</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.NOT_CONNECTED">
+<span class="sig-name descname"><span class="pre">NOT_CONNECTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(64,)</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.NOT_CONNECTED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.PROTOCOL_I2C_NXT_REG">
+<span class="sig-name descname"><span class="pre">PROTOCOL_I2C_NXT_REG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">19</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.PROTOCOL_I2C_NXT_REG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.PROTOCOL_UART_EV3">
+<span class="sig-name descname"><span class="pre">PROTOCOL_UART_EV3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">17</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.PROTOCOL_UART_EV3" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.UART_115K">
+<span class="sig-name descname"><span class="pre">UART_115K</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.UART_115K" title="Link to this definition"></a></dt>
+<dd><p>115200 baud</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.UART_2400">
+<span class="sig-name descname"><span class="pre">UART_2400</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.UART_2400" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.UART_9600">
+<span class="sig-name descname"><span class="pre">UART_9600</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.UART_9600" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.UART_MULTI_BRIAN_MASTER">
+<span class="sig-name descname"><span class="pre">UART_MULTI_BRIAN_MASTER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">41</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.UART_MULTI_BRIAN_MASTER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.AutoDetect.UART_MULTI_BRIAN_SLAVE">
+<span class="sig-name descname"><span class="pre">UART_MULTI_BRIAN_SLAVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">57</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.AutoDetect.UART_MULTI_BRIAN_SLAVE" title="Link to this definition"></a></dt>
+<dd><p>Slave has uart RX/TX pins swapped</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.sensors.sensor_port_probe.</span></span><span class="sig-name descname"><span class="pre">SensorInfo</span></span><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorInfo" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>i2c protocol specifies type as 8char string; uart ev3 as a single byte 0-255 when uart ev3 protocol is used,
+the name can be something like: “Uart 39” and the code will contain the actual value when i2c protocol is used,
+the code can be = 0</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorInfo.mode_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorInfo.mode_count" title="Link to this definition"></a></dt>
+<dd><p>Set by sensor handler. EV3 sensors report their mode count. Generic I2C sensor will have 0.
+Specific I2C sensors (NXT US) will have constant mode count. Even analog sensor, such as NXT light can have
+multiple modes and mode count - active, passive, blinking differential handled by ST code</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorInfo.mode_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorInfo.mode_name" title="Link to this definition"></a></dt>
+<dd><p>The name of the current mode.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorInfo.pct_max">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pct_max</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorInfo.pct_max" title="Link to this definition"></a></dt>
+<dd><p>Percent value corresponding to the maximum raw value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorInfo.pct_min">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pct_min</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorInfo.pct_min" title="Link to this definition"></a></dt>
+<dd><p>Percent value corresponding to the minimum raw value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorInfo.raw_max">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">raw_max</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorInfo.raw_max" title="Link to this definition"></a></dt>
+<dd><p>Maximum raw sensor value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorInfo.raw_min">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">raw_min</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorInfo.raw_min" title="Link to this definition"></a></dt>
+<dd><p>Minimum raw sensor value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorInfo.selected_mode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selected_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorInfo.selected_mode" title="Link to this definition"></a></dt>
+<dd><p>The currently selected mode of the sensor.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorInfo.sensor_type_code">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sensor_type_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorInfo.sensor_type_code" title="Link to this definition"></a></dt>
+<dd><p>Represents the sensor type code.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorInfo.sensor_type_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sensor_type_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorInfo.sensor_type_name" title="Link to this definition"></a></dt>
+<dd><p>The sensor type name as a string.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorInfo.si_max">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">si_max</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorInfo.si_max" title="Link to this definition"></a></dt>
+<dd><p>Scaled International (SI) value corresponding to the maximum raw value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorInfo.si_min">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">si_min</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorInfo.si_min" title="Link to this definition"></a></dt>
+<dd><p>Scaled International (SI) value corresponding to the minimum raw value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorInfo.unit_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unit_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorInfo.unit_name" title="Link to this definition"></a></dt>
+<dd><p>Name of the measurement unit.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorPortProbe">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.sensors.sensor_port_probe.</span></span><span class="sig-name descname"><span class="pre">SensorPortProbe</span></span><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorPortProbe" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorPortProbe.auto_detect">
+<span class="sig-name descname"><span class="pre">auto_detect</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.sensors.sensor_port_probe.AutoDetect" title="brian.sensors.sensor_port_probe.AutoDetect"><span class="pre">AutoDetect</span></a></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorPortProbe.auto_detect" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorPortProbe.auto_detect_hint">
+<span class="sig-name descname"><span class="pre">auto_detect_hint</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.sensors.sensor_port_probe.AutoDetect" title="brian.sensors.sensor_port_probe.AutoDetect"><span class="pre">AutoDetect</span></a></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorPortProbe.auto_detect_hint" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorPortProbe.info">
+<span class="sig-name descname"><span class="pre">info</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.sensors.sensor_port_probe.SensorInfo" title="brian.sensors.sensor_port_probe.SensorInfo"><span class="pre">SensorInfo</span></a></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorPortProbe.info" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorPortProbe.is_connected">
+<span class="sig-name descname"><span class="pre">is_connected</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorPortProbe.is_connected" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.SensorPortProbe.is_sensor_api_handler_registered">
+<span class="sig-name descname"><span class="pre">is_sensor_api_handler_registered</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#brian.sensors.sensor_port_probe.SensorPortProbe.is_sensor_api_handler_registered" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.probe_sensor">
+<span class="sig-prename descclassname"><span class="pre">brian.sensors.sensor_port_probe.</span></span><span class="sig-name descname"><span class="pre">probe_sensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorPort.SensorPort" title="brian.sensors.SensorPort.SensorPort"><span class="pre">SensorPort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#brian.sensors.sensor_port_probe.SensorPortProbe" title="brian.sensors.sensor_port_probe.SensorPortProbe"><span class="pre">SensorPortProbe</span></a></span></span><a class="headerlink" href="#brian.sensors.sensor_port_probe.probe_sensor" title="Link to this definition"></a></dt>
+<dd><p>Return latest read-only information about a sensor connected to a given port. This method can be called
+any time (regardless of registered Sensor port handler or if it is not registered)
+:param port: sensor port to probe.
+:return: information about the current port usage</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.probe_sensor_with_autodetect_hint">
+<span class="sig-prename descclassname"><span class="pre">brian.sensors.sensor_port_probe.</span></span><span class="sig-name descname"><span class="pre">probe_sensor_with_autodetect_hint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorPort.SensorPort" title="brian.sensors.SensorPort.SensorPort"><span class="pre">SensorPort</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">hint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#brian.sensors.sensor_port_probe.AutoDetect" title="brian.sensors.sensor_port_probe.AutoDetect"><span class="pre">AutoDetect</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#brian.sensors.sensor_port_probe.SensorPortProbe" title="brian.sensors.sensor_port_probe.SensorPortProbe"><span class="pre">SensorPortProbe</span></a></span></span><a class="headerlink" href="#brian.sensors.sensor_port_probe.probe_sensor_with_autodetect_hint" title="Link to this definition"></a></dt>
+<dd><p>Return latest read-only information about a sensor connected to a given port.
+It requests a specific handling of the sensor, based on the autodetect hint.
+The hint may be used to initialize a specific software protocol over a detected bus
+(e.g. use EV3 UART protocol if the detected sensor interfaces using UART).
+When you expect a specific class of sensors to be connected, this may be useful to
+extract more information, for example about the sensor modes.
+This method can be used only, when there is no Sensor handler registered.
+:param port: sensor port to probe.
+:param hint: hint to for autodetect (e.g. software protocol over detected hw bus)
+:return: information about the current port usage</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorPortAlreadyInUse" title="brian.sensors.SensorPortAlreadyInUse"><strong>SensorPortAlreadyInUse</strong></a> – When trying to probe port that is already in use.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.sensors.sensor_port_probe.reboot">
+<span class="sig-prename descclassname"><span class="pre">brian.sensors.sensor_port_probe.</span></span><span class="sig-name descname"><span class="pre">reboot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorPort.SensorPort" title="brian.sensors.SensorPort.SensorPort"><span class="pre">SensorPort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.sensors.sensor_port_probe.reboot" title="Link to this definition"></a></dt>
+<dd><p>Turn off power to the port and turn it back on. This will forcibly reboot the sensor.
+The powered-down state lasts about 100ms. In case of some (mostly digital) sensors, there can be
+some additional time (~1s or more) to boot up and process connection handshake with Brian.
+This method can be used only, when there is no Sensor handler registered. When there is, use the method
+in the Sensor handler itself.
+:param port: sensor port to force reboot.</p>
+</dd></dl>
+
 </section>
 </section>
 

@@ -54,7 +54,7 @@
 <li class="toctree-l4"><a class="reference internal" href="brian.uicontrol.html">brian.uicontrol package</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="brian.html#module-contents">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brian.html#module-brian">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -89,8 +89,36 @@
              
   <section id="brian-runtime-package">
 <h1>brian.runtime package<a class="headerlink" href="#brian-runtime-package" title="Link to this heading"></a></h1>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-brian.runtime">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-brian.runtime" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.runtime.enable_turn_off_by_buttons">
+<span class="sig-prename descclassname"><span class="pre">brian.runtime.</span></span><span class="sig-name descname"><span class="pre">enable_turn_off_by_buttons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.runtime.enable_turn_off_by_buttons" title="Link to this definition"></a></dt>
+<dd><p>If enabled (default), first press of any left together with any right button will send a KeyboardInterrupt.
+The second such press will hard abort the program.
+If disabled, the buttons will not be watched and the program can use them fully according to the
+programmer’s needs. It is the programmer’s responsibility to provide alternative shutdown mechanism.
+If no such mechanism is provided, the only two ways to exit a stuck program is to
+either eject the sd card or force power off of the entire brick.
+:param enabled: true if the Brian should watch for the turn-off button pattern, false to ignore it.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.runtime.power_off">
+<span class="sig-prename descclassname"><span class="pre">brian.runtime.</span></span><span class="sig-name descname"><span class="pre">power_off</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.runtime.power_off" title="Link to this definition"></a></dt>
+<dd><p>Shutdowns Brian.</p>
+<p>When Brian shutdown is requested, but it is still connected to power via USB, only a partial shutdown is performed.
+All peripheral functions (ports, audio, display, …) are shut down,
+but internal functions, such as battery charging and monitoring are still running.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.runtime.reboot_brian">
+<span class="sig-prename descclassname"><span class="pre">brian.runtime.</span></span><span class="sig-name descname"><span class="pre">reboot_brian</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.runtime.reboot_brian" title="Link to this definition"></a></dt>
+<dd><p>Reboots Brian.</p>
+<p>This will put Brian back to the main menu screen.</p>
+</dd></dl>
+
 </section>
 </section>
 

@@ -1,10 +1,10 @@
-from .SensorPort import *
-from .BrianBrianComm import *
-from .Sensor import *
-import sensor_port_probe
-import NXT as NXT
-import EV3 as EV3
-import HiTec as HiTec
+from brian.sensors.SensorPort import *
+from brian.sensors.BrianBrianComm import *
+from brian.sensors.Sensor import *
+import brian.sensors.sensor_port_probe
+import brian.sensors.NXT as NXT
+import brian.sensors.EV3 as EV3
+import brian.sensors.HiTec as HiTec
 
 
 class SensorException(Exception):

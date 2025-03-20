@@ -1,4 +1,4 @@
-from brian.uicontrol import ButtonId
+#from brian.uicontrol import ButtonId
 
 
 class UiEventsListener:

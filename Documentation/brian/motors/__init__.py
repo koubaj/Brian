@@ -1,12 +1,12 @@
-from MotorPort import *
-from Motor import *
-from EV3LargeMotor import *
-from EV3MediumMotor import *
-from NXTMotor import *
-from MovementEnd import *
-import motor_types
-import motor_port_probe
-import motor_limits
+from brian.motors.MotorPort import *
+from brian.motors.Motor import *
+from brian.motors.EV3LargeMotor import *
+from brian.motors.EV3MediumMotor import *
+from brian.motors.NXTMotor import *
+from brian.motors.MovementEnd import *
+import brian.motors.motor_types
+import brian.motors.motor_port_probe
+import brian.motors.motor_limits
 
 
 class MotorException(Exception):

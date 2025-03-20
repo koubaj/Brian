@@ -54,7 +54,7 @@
 <li class="toctree-l4"><a class="reference internal" href="brian.uicontrol.html">brian.uicontrol package</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="brian.html#module-contents">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brian.html#module-brian">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -93,20 +93,219 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="brian-sensors-nxt-lightsensornxt-module">
-<h2>brian.sensors.NXT.LightSensorNXT module<a class="headerlink" href="#brian-sensors-nxt-lightsensornxt-module" title="Link to this heading"></a></h2>
+<section id="module-brian.sensors.NXT.LightSensorNXT">
+<span id="brian-sensors-nxt-lightsensornxt-module"></span><h2>brian.sensors.NXT.LightSensorNXT module<a class="headerlink" href="#module-brian.sensors.NXT.LightSensorNXT" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.NXT.LightSensorNXT.LightSensorNXT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.sensors.NXT.LightSensorNXT.</span></span><span class="sig-name descname"><span class="pre">LightSensorNXT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorPort.SensorPort" title="brian.sensors.SensorPort.SensorPort"><span class="pre">SensorPort</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.NXT.LightSensorNXT.LightSensorNXT" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="brian.sensors.html#brian.sensors.Sensor.Sensor" title="brian.sensors.Sensor.Sensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sensor</span></code></a></p>
+<p>Class for interacting with NXT light sensor.</p>
+<p>Sensor is automatically registered in the constructor of the base class
+and un-registered in its destructor. It can also be unregistered with the LightSensorNXT.close_sensor() function.</p>
+<p>There can be at most one instance at any given time, of any sensor class per port in the entire program.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.NXT.LightSensorNXT.LightSensorNXT.light_value">
+<span class="sig-name descname"><span class="pre">light_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">led_on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#brian.sensors.NXT.LightSensorNXT.LightSensorNXT.light_value" title="Link to this definition"></a></dt>
+<dd><p>Measures incoming light.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>led_on</strong> – Indicates whether the red LED should be on or off.
+- If no value is provided or <cite>None</cite> is passed, the previously set LED state will be used.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value in range 0-1, with 0 being the darkest and 1 being the brightest.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.NXT.LightSensorNXT.LightSensorNXT.light_value_raw">
+<span class="sig-name descname"><span class="pre">light_value_raw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">led_on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.NXT.LightSensorNXT.LightSensorNXT.light_value_raw" title="Link to this definition"></a></dt>
+<dd><p>Measures incoming light. Raw measurement is inverted, meaning lower values correspond to brighter light.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>led_on</strong> – Indicates whether the red LED should be on or off.
+- If no value is provided or <cite>None</cite> is passed, the previously set LED state will be used.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value in range 0-4095, with 4095 being the darkest and 0 being the brightest.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.NXT.LightSensorNXT.LightSensorNXT.set_led_on">
+<span class="sig-name descname"><span class="pre">set_led_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">led_on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.sensors.NXT.LightSensorNXT.LightSensorNXT.set_led_on" title="Link to this definition"></a></dt>
+<dd><p>This function sets the sensor to the desired mode. While it’s not mandatory, it is recommended to call this
+function before accessing values from the sensor in a specific mode to prevent SensorIsNotReady exceptions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>led_on</strong> – whether the red LED should be set on or off</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="brian-sensors-nxt-soundsensornxt-module">
-<h2>brian.sensors.NXT.SoundSensorNXT module<a class="headerlink" href="#brian-sensors-nxt-soundsensornxt-module" title="Link to this heading"></a></h2>
+<section id="module-brian.sensors.NXT.SoundSensorNXT">
+<span id="brian-sensors-nxt-soundsensornxt-module"></span><h2>brian.sensors.NXT.SoundSensorNXT module<a class="headerlink" href="#module-brian.sensors.NXT.SoundSensorNXT" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.NXT.SoundSensorNXT.SoundSensorNXT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.sensors.NXT.SoundSensorNXT.</span></span><span class="sig-name descname"><span class="pre">SoundSensorNXT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorPort.SensorPort" title="brian.sensors.SensorPort.SensorPort"><span class="pre">SensorPort</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.NXT.SoundSensorNXT.SoundSensorNXT" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="brian.sensors.html#brian.sensors.Sensor.Sensor" title="brian.sensors.Sensor.Sensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sensor</span></code></a></p>
+<p>Class for interacting with NXT sound sensor.</p>
+<p>Sensor is automatically registered in the constructor of the base class
+and un-registered in its destructor. It can also be unregistered with the SoundSensorNXT.close_sensor() function.</p>
+<p>There can be at most one instance at any given time, of any sensor class per port in the entire program.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.NXT.SoundSensorNXT.SoundSensorNXT.sound_intensity">
+<span class="sig-name descname"><span class="pre">sound_intensity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#brian.sensors.NXT.SoundSensorNXT.SoundSensorNXT.sound_intensity" title="Link to this definition"></a></dt>
+<dd><p>Measures incoming sound.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Value in range 0-1, with 0 being the quietest and 1 being the loudest.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.NXT.SoundSensorNXT.SoundSensorNXT.sound_intensity_raw">
+<span class="sig-name descname"><span class="pre">sound_intensity_raw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.NXT.SoundSensorNXT.SoundSensorNXT.sound_intensity_raw" title="Link to this definition"></a></dt>
+<dd><p>Measures incoming sound. Raw measurement is inverted, meaning lower values correspond to louder sounds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Value in range 0-4095, with 4095 being the quietest and 0 being the loudest.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="brian-sensors-nxt-touchsensornxt-module">
-<h2>brian.sensors.NXT.TouchSensorNXT module<a class="headerlink" href="#brian-sensors-nxt-touchsensornxt-module" title="Link to this heading"></a></h2>
+<section id="module-brian.sensors.NXT.TouchSensorNXT">
+<span id="brian-sensors-nxt-touchsensornxt-module"></span><h2>brian.sensors.NXT.TouchSensorNXT module<a class="headerlink" href="#module-brian.sensors.NXT.TouchSensorNXT" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.NXT.TouchSensorNXT.TouchSensorNXT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.sensors.NXT.TouchSensorNXT.</span></span><span class="sig-name descname"><span class="pre">TouchSensorNXT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorPort.SensorPort" title="brian.sensors.SensorPort.SensorPort"><span class="pre">SensorPort</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.NXT.TouchSensorNXT.TouchSensorNXT" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="brian.sensors.html#brian.sensors.Sensor.Sensor" title="brian.sensors.Sensor.Sensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sensor</span></code></a></p>
+<p>Class for interacting with NXT touch sensor.</p>
+<p>Sensor is automatically registered in the constructor of the base class
+and un-registered in its destructor. It can also be unregistered with the TouchSensorNXT.close_sensor() function.</p>
+<p>There can be at most one instance at any given time, of any sensor class per port in the entire program.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.NXT.TouchSensorNXT.TouchSensorNXT.is_pressed">
+<span class="sig-name descname"><span class="pre">is_pressed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.sensors.NXT.TouchSensorNXT.TouchSensorNXT.is_pressed" title="Link to this definition"></a></dt>
+<dd><p>Measures the sensor state. Returns boolean of the last button pressed state.
+If the sensor is not ready, returns False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if the sensor button is pressed, False otherwise. Or False if the sensor is not ready.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.NXT.TouchSensorNXT.TouchSensorNXT.wait_for_press">
+<span class="sig-name descname"><span class="pre">wait_for_press</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.sensors.NXT.TouchSensorNXT.TouchSensorNXT.wait_for_press" title="Link to this definition"></a></dt>
+<dd><p>Waits for next button press event.
+This function is blocking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – Maximum number of milliseconds to wait. If the timeout is negative, the function will wait indefinitely.</p>
+</dd>
+<dt class="field-even">Return success<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p>True: If the desired button event was caught.</p></li>
+<li><p>False: If the timeout ran out.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.NXT.TouchSensorNXT.TouchSensorNXT.wait_for_press_and_release">
+<span class="sig-name descname"><span class="pre">wait_for_press_and_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.sensors.NXT.TouchSensorNXT.TouchSensorNXT.wait_for_press_and_release" title="Link to this definition"></a></dt>
+<dd><p>Waits for next button press and release event.
+This function is blocking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – Maximum number of milliseconds to wait. If the timeout is negative, the function will wait indefinitely.</p>
+</dd>
+<dt class="field-even">Return success<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p>True: If the desired button event was caught.</p></li>
+<li><p>False: If the timeout ran out.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.NXT.TouchSensorNXT.TouchSensorNXT.wait_for_release">
+<span class="sig-name descname"><span class="pre">wait_for_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.sensors.NXT.TouchSensorNXT.TouchSensorNXT.wait_for_release" title="Link to this definition"></a></dt>
+<dd><p>Waits for next button release event.
+This function is blocking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – Maximum number of milliseconds to wait. If the timeout is negative, the function will wait indefinitely.</p>
+</dd>
+<dt class="field-even">Return success<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p>True: If the desired button event was caught.</p></li>
+<li><p>False: If the timeout ran out.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="brian-sensors-nxt-ultrasonicsensornxt-module">
-<h2>brian.sensors.NXT.UltrasonicSensorNXT module<a class="headerlink" href="#brian-sensors-nxt-ultrasonicsensornxt-module" title="Link to this heading"></a></h2>
+<section id="module-brian.sensors.NXT.UltrasonicSensorNXT">
+<span id="brian-sensors-nxt-ultrasonicsensornxt-module"></span><h2>brian.sensors.NXT.UltrasonicSensorNXT module<a class="headerlink" href="#module-brian.sensors.NXT.UltrasonicSensorNXT" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.NXT.UltrasonicSensorNXT.UltrasonicSensorNXT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.sensors.NXT.UltrasonicSensorNXT.</span></span><span class="sig-name descname"><span class="pre">UltrasonicSensorNXT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorPort.SensorPort" title="brian.sensors.SensorPort.SensorPort"><span class="pre">SensorPort</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.NXT.UltrasonicSensorNXT.UltrasonicSensorNXT" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="brian.sensors.html#brian.sensors.Sensor.Sensor" title="brian.sensors.Sensor.Sensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sensor</span></code></a></p>
+<p>Class for interacting with NXT ultrasonic sensor.</p>
+<p>Sensor is automatically registered in the constructor of the base class
+and un-registered in its destructor. It can also be unregistered with the UltrasonicSensorNXT.close_sensor() function.</p>
+<p>There can be at most one instance at any given time, of any sensor class per port in the entire program.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.NXT.UltrasonicSensorNXT.UltrasonicSensorNXT.distance_cm">
+<span class="sig-name descname"><span class="pre">distance_cm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.NXT.UltrasonicSensorNXT.UltrasonicSensorNXT.distance_cm" title="Link to this definition"></a></dt>
+<dd><p>Continuously measures the distance and returns the value in cm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>distance in cm (0-255).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-brian.sensors.NXT">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-brian.sensors.NXT" title="Link to this heading"></a></h2>
 </section>
 </section>
 

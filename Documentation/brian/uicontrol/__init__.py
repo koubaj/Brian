@@ -1,6 +1,6 @@
 from typing import List, Union
 from enum import Enum
-from UiEventsListener import *
+from brian.uicontrol.UiEventsListener import *
 
 
 class UiEventsListenerAlreadyClosedError(Exception):

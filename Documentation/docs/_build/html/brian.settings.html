@@ -54,7 +54,7 @@
 <li class="toctree-l4"><a class="reference internal" href="brian.uicontrol.html">brian.uicontrol package</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="brian.html#module-contents">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brian.html#module-brian">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -89,8 +89,95 @@
              
   <section id="brian-settings-package">
 <h1>brian.settings package<a class="headerlink" href="#brian-settings-package" title="Link to this heading"></a></h1>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-brian.settings">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-brian.settings" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.settings.are_os_button_sounds_enabled">
+<span class="sig-prename descclassname"><span class="pre">brian.settings.</span></span><span class="sig-name descname"><span class="pre">are_os_button_sounds_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.settings.are_os_button_sounds_enabled" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether os clicks are enabled (not muted).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.settings.are_os_button_sounds_preferred">
+<span class="sig-prename descclassname"><span class="pre">brian.settings.</span></span><span class="sig-name descname"><span class="pre">are_os_button_sounds_preferred</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.settings.are_os_button_sounds_preferred" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether os clicks were enabled in the settings in main menu.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.settings.enable_os_button_sounds">
+<span class="sig-prename descclassname"><span class="pre">brian.settings.</span></span><span class="sig-name descname"><span class="pre">enable_os_button_sounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.settings.enable_os_button_sounds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable</strong> – Whether to enable or disable os click sounds.</p>
+</dd>
+</dl>
+<p>Works only if OS is not muted in the settings in main menu.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.settings.get_current_lcd_brightness">
+<span class="sig-prename descclassname"><span class="pre">brian.settings.</span></span><span class="sig-name descname"><span class="pre">get_current_lcd_brightness</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#brian.settings.get_current_lcd_brightness" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Current lcd brightness in percent (1% ~ 100%).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.settings.get_current_volume">
+<span class="sig-prename descclassname"><span class="pre">brian.settings.</span></span><span class="sig-name descname"><span class="pre">get_current_volume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#brian.settings.get_current_volume" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Current speaker volume in percent (0% ~ 100%).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.settings.get_preferred_lcd_brightness">
+<span class="sig-prename descclassname"><span class="pre">brian.settings.</span></span><span class="sig-name descname"><span class="pre">get_preferred_lcd_brightness</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#brian.settings.get_preferred_lcd_brightness" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Lcd brightness value that was set in the settings in main menu (0% ~ 100%).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.settings.get_preferred_volume">
+<span class="sig-prename descclassname"><span class="pre">brian.settings.</span></span><span class="sig-name descname"><span class="pre">get_preferred_volume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#brian.settings.get_preferred_volume" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Speaker volume that was set in the settings in main menu (0% ~ 100%).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.settings.set_lcd_brightness">
+<span class="sig-prename descclassname"><span class="pre">brian.settings.</span></span><span class="sig-name descname"><span class="pre">set_lcd_brightness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">percent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.settings.set_lcd_brightness" title="Link to this definition"></a></dt>
+<dd><p>Set current lcd brightness
+:param percent: Percentage of the maximum brightness to apply. The value will be clipped to range 1% ~ 100%.
+The brightness will not be set higher, than the one set in the settings in main menu.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="brian.settings.set_volume">
+<span class="sig-prename descclassname"><span class="pre">brian.settings.</span></span><span class="sig-name descname"><span class="pre">set_volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">percent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.settings.set_volume" title="Link to this definition"></a></dt>
+<dd><p>Set current volume
+:param percent: Percentage of the maximum volume to apply. The value will be clipped to range 0% ~ 100%.
+The volume will not be set higher, than the one set in the settings in main menu.</p>
+</dd></dl>
+
 </section>
 </section>
 

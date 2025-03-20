@@ -54,7 +54,7 @@
 <li class="toctree-l4"><a class="reference internal" href="brian.uicontrol.html">brian.uicontrol package</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="brian.html#module-contents">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brian.html#module-brian">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -93,20 +93,774 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="brian-sensors-ev3-colorsensorev3-module">
-<h2>brian.sensors.EV3.ColorSensorEV3 module<a class="headerlink" href="#brian-sensors-ev3-colorsensorev3-module" title="Link to this heading"></a></h2>
+<section id="module-brian.sensors.EV3.ColorSensorEV3">
+<span id="brian-sensors-ev3-colorsensorev3-module"></span><h2>brian.sensors.EV3.ColorSensorEV3 module<a class="headerlink" href="#module-brian.sensors.EV3.ColorSensorEV3" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.sensors.EV3.ColorSensorEV3.</span></span><span class="sig-name descname"><span class="pre">ColorSensorEV3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorPort.SensorPort" title="brian.sensors.SensorPort.SensorPort"><span class="pre">SensorPort</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="brian.sensors.html#brian.sensors.Sensor.Sensor" title="brian.sensors.Sensor.Sensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sensor</span></code></a></p>
+<p>Class for interacting with EV3 color sensor.</p>
+<p>Sensor is automatically registered in the constructor of the base class
+and un-registered in its destructor. It can also be unregistered with the ColorSensorEV3.close_sensor() function.</p>
+<p>There can be at most one instance at any given time, of any sensor class per port in the entire program.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Enum" title="enum.Enum"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a></p>
+<p>Constants for <cite>ColorSensor.detected_color(self)</cite> function.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.BLACK">
+<span class="sig-name descname"><span class="pre">BLACK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.BLACK" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.BLUE">
+<span class="sig-name descname"><span class="pre">BLUE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.BLUE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.BROWN">
+<span class="sig-name descname"><span class="pre">BROWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.BROWN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.GREEN">
+<span class="sig-name descname"><span class="pre">GREEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.GREEN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.NO_COLOR">
+<span class="sig-name descname"><span class="pre">NO_COLOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.NO_COLOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.RED">
+<span class="sig-name descname"><span class="pre">RED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.RED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.WHITE">
+<span class="sig-name descname"><span class="pre">WHITE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.WHITE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.YELLOW">
+<span class="sig-name descname"><span class="pre">YELLOW</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color.YELLOW" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Mode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Mode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Enum" title="enum.Enum"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Mode.AMBIENT">
+<span class="sig-name descname"><span class="pre">AMBIENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Mode.AMBIENT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Mode.COLOR_DETECT">
+<span class="sig-name descname"><span class="pre">COLOR_DETECT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Mode.COLOR_DETECT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Mode.REFLECT">
+<span class="sig-name descname"><span class="pre">REFLECT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Mode.REFLECT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Mode.REFLECT_RAW">
+<span class="sig-name descname"><span class="pre">REFLECT_RAW</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Mode.REFLECT_RAW" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Mode.RGB_RAW">
+<span class="sig-name descname"><span class="pre">RGB_RAW</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Mode.RGB_RAW" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.RawRGB">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RawRGB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">red</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">green</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.RawRGB" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class used to hold rgb values from ColorSensorEV3.rgb_values_raw() measurement.
+Each color channel holds values between 0-1023.
+Attributes can be accessed either directly or using an index (RawRGB[0] = RawRGB.red)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.RawRGB.blue">
+<span class="sig-name descname"><span class="pre">blue</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.RawRGB.blue" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.RawRGB.green">
+<span class="sig-name descname"><span class="pre">green</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.RawRGB.green" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.RawRGB.red">
+<span class="sig-name descname"><span class="pre">red</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.RawRGB.red" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.ambient_value">
+<span class="sig-name descname"><span class="pre">ambient_value</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.ambient_value" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>AMBIENT</cite> and returns the last value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ambient in % (0-100).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;AMBIENT mode:&lt;/b&gt;
+Measure ambient light intensity. The values are calibrated
+within the sensor itself. Returns the values in percent, in range 0-100.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.detected_color">
+<span class="sig-name descname"><span class="pre">detected_color</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color" title="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color"><span class="pre">Color</span></a></span></span><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.detected_color" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>COLOR_DETECT</cite> and returns the last value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>color constants corresponding to Color.[COLOR].</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;COLOR_DETECT mode:&lt;/b&gt;
+Measure and discriminate the color. The discrimination is provided by the sensor itself.
+If this works poorly for your use case, you can use <cite>RGB_RAW</cite> instead.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.get_color_name">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_color_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color" title="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Color"><span class="pre">Color</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.get_color_name" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>color</strong> – Color to get the name of.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>English name of the provided color. This is a convenience function for UI or logging.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.reflected_value">
+<span class="sig-name descname"><span class="pre">reflected_value</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.reflected_value" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>REFLECT</cite> and returns the last value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>reflectivity in % (0-100).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;REFLECT mode:&lt;/b&gt;
+Measure surface reflectivity for red light. The values are calibrated
+within the sensor itself. Returns the values in percent, in range 0-100.
+The measurement is corrected for the ambient light change.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.reflected_value_raw">
+<span class="sig-name descname"><span class="pre">reflected_value_raw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.reflected_value_raw" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to`REFLECT_RAW` and returns the last value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>reflectivity raw values (0-1023).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;REFLECT_RAW mode:&lt;/b&gt;
+Measure surface reflectivity for red light. The values
+are uncalibrated. Code using this function must thus perform
+range scaling/shifting manually. Measuring in this mode should
+provide more resolution over <cite>REFLECT</cite> mode. Returns values in range 0-1023.
+The measurement is corrected for the ambient light change.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.rgb_values_raw">
+<span class="sig-name descname"><span class="pre">rgb_values_raw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.RawRGB" title="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.RawRGB"><span class="pre">RawRGB</span></a></span></span><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.rgb_values_raw" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>RGB_RAW</cite> and return the last value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>RGB raw values (0-1023 each channel).</p>
+</dd>
+</dl>
+<p>You can access them with RGB.red, RGB.green and RGB.blue, or by using subscription (RGB[0], RGB[1], …)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;RGB_RAW mode:&lt;/b&gt;
+Measure surface reflectivity for red, green and blue light. The values
+are uncalibrated. Code using this function must thus perform
+range scaling/shifting manually.
+The measurement is corrected for the ambient light change.
+rgb_values_raw</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.set_mode">
+<span class="sig-name descname"><span class="pre">set_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Mode" title="brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.Mode"><span class="pre">Mode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.sensors.EV3.ColorSensorEV3.ColorSensorEV3.set_mode" title="Link to this definition"></a></dt>
+<dd><p>This function sets the sensor to the desired mode. While it’s not mandatory, it is recommended to call this
+function before accessing values from the sensor in a specific mode to prevent SensorIsNotReady exceptions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mode</strong> – desired mode to be set</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="brian-sensors-ev3-gyrosensorev3-module">
-<h2>brian.sensors.EV3.GyroSensorEV3 module<a class="headerlink" href="#brian-sensors-ev3-gyrosensorev3-module" title="Link to this heading"></a></h2>
+<section id="module-brian.sensors.EV3.GyroSensorEV3">
+<span id="brian-sensors-ev3-gyrosensorev3-module"></span><h2>brian.sensors.EV3.GyroSensorEV3 module<a class="headerlink" href="#module-brian.sensors.EV3.GyroSensorEV3" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.sensors.EV3.GyroSensorEV3.</span></span><span class="sig-name descname"><span class="pre">GyroSensorEV3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorPort.SensorPort" title="brian.sensors.SensorPort.SensorPort"><span class="pre">SensorPort</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="brian.sensors.html#brian.sensors.Sensor.Sensor" title="brian.sensors.Sensor.Sensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sensor</span></code></a></p>
+<p>Class for interacting with EV3 gyro sensor.</p>
+<p>Sensor is automatically registered in the constructor of the base class
+and un-registered in its destructor. It can also be unregistered with the GyroSensorEV3.close_sensor() function.</p>
+<p>There can be at most one instance at any given time, of any sensor class per port in the entire program.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Enum">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Enum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Enum" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Create a collection of name/value pairs.</p>
+<p>Example enumeration:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>Access them by:</p>
+<ul>
+<li><p>attribute access:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>value lookup:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>name lookup:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Enumerations can be iterated over, and know how many members they have:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
+<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
+</pre></div>
+</div>
+<p>Methods can be added to enumerations, and members can have their own
+attributes – see the documentation for details.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Enum.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Enum.name" title="Link to this definition"></a></dt>
+<dd><p>The name of the Enum member.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Enum.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Enum.value" title="Link to this definition"></a></dt>
+<dd><p>The value of the Enum member.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Enum" title="enum.Enum"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode.ANGLE">
+<span class="sig-name descname"><span class="pre">ANGLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode.ANGLE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode.ANGLE_AND_SPEED">
+<span class="sig-name descname"><span class="pre">ANGLE_AND_SPEED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode.ANGLE_AND_SPEED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode.SPEED">
+<span class="sig-name descname"><span class="pre">SPEED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode.SPEED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode.SPEED_COARSE">
+<span class="sig-name descname"><span class="pre">SPEED_COARSE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode.SPEED_COARSE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode.TILT_ANGLE">
+<span class="sig-name descname"><span class="pre">TILT_ANGLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode.TILT_ANGLE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode.TILT_SPEED">
+<span class="sig-name descname"><span class="pre">TILT_SPEED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode.TILT_SPEED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.angle">
+<span class="sig-name descname"><span class="pre">angle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.angle" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>ANGLE</cite> and returns the last value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>angle (int) in degrees (-32768 to 32768).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;ANGLE mode:&lt;/b&gt;
+Measures the tilt angle and returns the value in degrees in range -32768 to 32767.</p>
+<p>Clockwise is positive when looking at the side of the sensor with the arrows.</p>
+<p>If you spin around too many times in <cite>ANGLE</cite>,`ANGLE_AND_SPEED` or <cite>TILT_ANGLE</cite> mode,
+it will get stuck at 32767 or overflow through -32768 depending on when the sensor was manufactured.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.angle_and_speed">
+<span class="sig-name descname"><span class="pre">angle_and_speed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.angle_and_speed" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>ANGLE_AND_SPEED</cite> and returns the last value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple consisting of two integers:
+- The first integer represents the angle (deg) measurement.
+- The second integer represents the speed (deg/s) measurement.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;ANGLE_AND_SPEED mode:&lt;/b&gt;
+Measures the tilt angle and angular speed and returns the value in degrees in range -32768 to 32767 for angle and -500 to 500 for speed.</p>
+<p>Clockwise is positive when looking at the side of the sensor with the arrows.
+If you spin around too many times in “ANGLE”, “ANGLE_AND_SPEED” or “TILT_ANGLE” mode,
+it will get stuck at 32767 or overflow through -32768 depending on when the sensor was manufactured.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.reboot">
+<span class="sig-name descname"><span class="pre">reboot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.reboot" title="Link to this definition"></a></dt>
+<dd><p>Reboots the sensor to force recalibration.</p>
+<p>During the recalibration, keep the sensor steady to minimize drifting.</p>
+<p>&lt;b&gt;Reboot&lt;/b&gt;
+Turn off power to the port and turn it back on. This will forcibly reboot the sensor.</p>
+<p>The powered-down state lasts about 100ms. In case of some (mostly digital) sensors, there can be
+some additional time (~1s or more) to boot up and process connection handshake with Brian.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.set_mode">
+<span class="sig-name descname"><span class="pre">set_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode" title="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Mode"><span class="pre">Mode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.set_mode" title="Link to this definition"></a></dt>
+<dd><p>This function sets the sensor to the desired mode. While it’s not mandatory, it is recommended to call this
+function before accessing values from the sensor in a specific mode to prevent SensorIsNotReady exceptions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mode</strong> – desired mode to be set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.set_zero_point">
+<span class="sig-name descname"><span class="pre">set_zero_point</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.set_zero_point" title="Link to this definition"></a></dt>
+<dd><p>Adjusts the angle readings to create new zero point angle.
+Adjusts angle only in “ANGLE”, “ANGLE_AND_SPEED” and “TILT_ANGLE” modes.
+Does not fix drift (for drift fixing, reboot the sensor using the reboot() function).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.speed">
+<span class="sig-name descname"><span class="pre">speed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.speed" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>SPEED</cite> and returns the last value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>angular speed in degrees/s (-500 to 500).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;SPEED mode:&lt;/b&gt;
+Measures angular speed and returns the value in degrees/second in range -500 to 500.</p>
+<p>Clockwise is positive when looking at the side of the sensor with the arrows.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.speed_coarse">
+<span class="sig-name descname"><span class="pre">speed_coarse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.speed_coarse" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>SPEED_COARSE</cite> and returns the last value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>angular speed in degrees/s (-1464 to 1535).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;SPEED_COARSE mode:&lt;/b&gt;
+Measures angular speed and returns the value in degrees/second in range -1464 to 1535.
+Lower resolution, but wider range than the “SPEED” mode.</p>
+<p>Clockwise is positive when looking at the side of the sensor with the arrows.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.tilt_angle">
+<span class="sig-name descname"><span class="pre">tilt_angle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.tilt_angle" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>TILT_ANGLE</cite> and returns the last value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>angle (int) in degrees (-32768 to 32768).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;TILT_ANGLE mode:&lt;/b&gt;
+Measures the tilt angle around a second axis and returns the value in degrees in range -32768 to 32767.</p>
+<p>This mode is not present in older sensors (date code ending with 2 or 3).
+Clockwise is positive when looking at the side of the sensor opposite the cable jack.</p>
+<p>If you spin around too many times in “ANGLE”, “ANGLE_AND_SPEED” or “TILT_ANGLE” mode,
+it will get stuck at 32767 or overflow through -32768 depending on when the sensor was manufactured.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.tilt_speed">
+<span class="sig-name descname"><span class="pre">tilt_speed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.tilt_speed" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>Modes::TILT_SPEED</cite> and returns the last value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>angular speed in degrees/s (-500 to 500).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;TILT_SPEED mode:&lt;/b&gt;
+Measures angular speed around a second axis and returns the value in degrees/second in range -500 to 500
+Clockwise is positive when looking at the side of the sensor opposite the cable jack.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="brian-sensors-ev3-touchsensorev3-module">
-<h2>brian.sensors.EV3.TouchSensorEV3 module<a class="headerlink" href="#brian-sensors-ev3-touchsensorev3-module" title="Link to this heading"></a></h2>
+<section id="module-brian.sensors.EV3.TouchSensorEV3">
+<span id="brian-sensors-ev3-touchsensorev3-module"></span><h2>brian.sensors.EV3.TouchSensorEV3 module<a class="headerlink" href="#module-brian.sensors.EV3.TouchSensorEV3" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.EV3.TouchSensorEV3.TouchSensorEV3">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.sensors.EV3.TouchSensorEV3.</span></span><span class="sig-name descname"><span class="pre">TouchSensorEV3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorPort.SensorPort" title="brian.sensors.SensorPort.SensorPort"><span class="pre">SensorPort</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.EV3.TouchSensorEV3.TouchSensorEV3" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="brian.sensors.html#brian.sensors.Sensor.Sensor" title="brian.sensors.Sensor.Sensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sensor</span></code></a></p>
+<p>Class for interacting with EV3 touch sensor.</p>
+<p>Sensor is automatically registered in the constructor of the base class
+and un-registered in its destructor. It can also be unregistered with the TouchSensorEV3.close_sensor() function.</p>
+<p>There can be at most one instance at any given time, of any sensor class per port in the entire program.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.TouchSensorEV3.TouchSensorEV3.is_pressed">
+<span class="sig-name descname"><span class="pre">is_pressed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.sensors.EV3.TouchSensorEV3.TouchSensorEV3.is_pressed" title="Link to this definition"></a></dt>
+<dd><p>Measures the sensor state. Returns boolean of the last button pressed state.
+If the sensor is not ready, returns False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if the sensor button is pressed, False otherwise. Or False if the sensor is not ready.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.TouchSensorEV3.TouchSensorEV3.wait_for_press">
+<span class="sig-name descname"><span class="pre">wait_for_press</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.sensors.EV3.TouchSensorEV3.TouchSensorEV3.wait_for_press" title="Link to this definition"></a></dt>
+<dd><p>Waits for next button press event.
+This function is blocking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – Maximum number of milliseconds to wait. If the timeout is negative, the function will wait indefinitely.</p>
+</dd>
+<dt class="field-even">Return success<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p>True: If the desired button event was caught.</p></li>
+<li><p>False: If the timeout ran out.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.TouchSensorEV3.TouchSensorEV3.wait_for_press_and_release">
+<span class="sig-name descname"><span class="pre">wait_for_press_and_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.sensors.EV3.TouchSensorEV3.TouchSensorEV3.wait_for_press_and_release" title="Link to this definition"></a></dt>
+<dd><p>Waits for next button press and release event.
+This function is blocking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – Maximum number of milliseconds to wait. If the timeout is negative, the function will wait indefinitely.</p>
+</dd>
+<dt class="field-even">Return success<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p>True: If the desired button event was caught.</p></li>
+<li><p>False: If the timeout ran out.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.TouchSensorEV3.TouchSensorEV3.wait_for_release">
+<span class="sig-name descname"><span class="pre">wait_for_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.sensors.EV3.TouchSensorEV3.TouchSensorEV3.wait_for_release" title="Link to this definition"></a></dt>
+<dd><p>Waits for next button release event.
+This function is blocking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_ms</strong> – Maximum number of milliseconds to wait. If the timeout is negative, the function will wait indefinitely.</p>
+</dd>
+<dt class="field-even">Return success<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p>True: If the desired button event was caught.</p></li>
+<li><p>False: If the timeout ran out.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="brian-sensors-ev3-ultrasonicsensorev3-module">
-<h2>brian.sensors.EV3.UltrasonicSensorEV3 module<a class="headerlink" href="#brian-sensors-ev3-ultrasonicsensorev3-module" title="Link to this heading"></a></h2>
+<section id="module-brian.sensors.EV3.UltrasonicSensorEV3">
+<span id="brian-sensors-ev3-ultrasonicsensorev3-module"></span><h2>brian.sensors.EV3.UltrasonicSensorEV3 module<a class="headerlink" href="#module-brian.sensors.EV3.UltrasonicSensorEV3" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brian.sensors.EV3.UltrasonicSensorEV3.</span></span><span class="sig-name descname"><span class="pre">UltrasonicSensorEV3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorPort.SensorPort" title="brian.sensors.SensorPort.SensorPort"><span class="pre">SensorPort</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="brian.sensors.html#brian.sensors.Sensor.Sensor" title="brian.sensors.Sensor.Sensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sensor</span></code></a></p>
+<p>Class for interacting with EV3 ultrasonic sensor.</p>
+<p>Sensor is automatically registered in the constructor of the base class
+and un-registered in its destructor. It can also be unregistered with the UltrasonicSensorEV3.close_sensor() function.</p>
+<p>There can be at most one instance at any given time, of any sensor class per port in the entire program.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.Mode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.Mode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#brian.sensors.EV3.GyroSensorEV3.GyroSensorEV3.Enum" title="enum.Enum"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.Mode.DETECT_OTHER_US">
+<span class="sig-name descname"><span class="pre">DETECT_OTHER_US</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.Mode.DETECT_OTHER_US" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.Mode.DISTANCE_MM">
+<span class="sig-name descname"><span class="pre">DISTANCE_MM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.Mode.DISTANCE_MM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.Mode.DISTANCE_TENTHS_OF_INCH">
+<span class="sig-name descname"><span class="pre">DISTANCE_TENTHS_OF_INCH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.Mode.DISTANCE_TENTHS_OF_INCH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.Mode.SINGLESHOT_MM">
+<span class="sig-name descname"><span class="pre">SINGLESHOT_MM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.Mode.SINGLESHOT_MM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.Mode.SINGLESHOT_TENTHS_OF_INCH">
+<span class="sig-name descname"><span class="pre">SINGLESHOT_TENTHS_OF_INCH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.Mode.SINGLESHOT_TENTHS_OF_INCH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.distance_mm">
+<span class="sig-name descname"><span class="pre">distance_mm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.distance_mm" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>DISTANCE_MM</cite> and return the last value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>distance in mm (0-2550). Or 2550 it reported a measurement error.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;DISTANCE_MM mode:&lt;/b&gt;
+Continuously measures the distance and returns the value in mm.
+Returns the last measured distance in mm, in range 0-2550. If the measurement fails, the
+sensor reports a magic number (distance) of 2550.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.distance_tenths_of_inch">
+<span class="sig-name descname"><span class="pre">distance_tenths_of_inch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.distance_tenths_of_inch" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>DISTANCE_TENTHS_OF_INCH</cite> and return the last value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>distance in tenths of an inch (0-1003).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;DISTANCE_TENTHS_OF_INCH mode:&lt;/b&gt;
+Continuously measures the distance and returns the value in tenths of an inch.
+Returns the last measured distance in tenths of an inch, in range 0-1003. If the measurement fails, the
+sensor reports a magic number (distance) of 1003.
+distance_tenths_of_inch</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.is_other_us_detected">
+<span class="sig-name descname"><span class="pre">is_other_us_detected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.is_other_us_detected" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>DETECT_OTHER_US</cite> and return the last value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if other ultrasonic sensor is active and in range, False otherwise.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;DETECT_OTHER_US mode:&lt;/b&gt;
+Check if another ultrasonic sensor is active within the hearing distance of this sensor.
+Returns boolean value - True indicates that another ultrasonic sensor has been detected.
+A true value can also be triggered by a loud noise such as clapping.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.last_single_shot_mm">
+<span class="sig-name descname"><span class="pre">last_single_shot_mm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.last_single_shot_mm" title="Link to this definition"></a></dt>
+<dd><p>If the sensor is in <cite>SINGLESHOT_MM</cite> mode, returns the last value.
+If the sensor is in a different mode returns 2550. This method
+does not trigger the measurement. To trigger the measurement, use trigger_single_shot_measurement_mm().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>distance in mm (0-2550). Or 2550 if it reported a measurement error.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;SINGLESHOT_MM mode:&lt;/b&gt;
+Activates once and measures the distance. After the measurement, the sensor goes to sleep and
+does not produce ultrasonic waves. This mode can be used when handling multiple ultrasonic
+sensors at the same time, to avoid interference between them. The single shot mode should not
+be called more often than about once in 250ms.
+Returns the last measured distance in mm, in range 0-2550. If the measurement fails, the
+sensor reports a magic number (distance) of 2550.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.last_single_shot_tenths_of_inch">
+<span class="sig-name descname"><span class="pre">last_single_shot_tenths_of_inch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.last_single_shot_tenths_of_inch" title="Link to this definition"></a></dt>
+<dd><p>If the sensor is in <cite>SINGLESHOT_TENTHS_OF_INCH</cite> mode, returns the last value.
+If the sensor is in a different mode, returns 1003. This method
+does not trigger the measurement. To trigger the measurement, use trigger_single_shot_measurement_tenths_of_inch()</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>distance in tenths of an inch (0-1003). Or 1003 if it reported a measurement error.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;SINGLESHOT_TENTHS_OF_INCH mode:&lt;/b&gt;
+Activates once and measures the distance. After the measurement, the sensor goes to sleep and
+does not produce ultrasonic waves. This mode can be used when handling multiple ultrasonic
+sensors at the same time, to avoid interference between them. The single shot mode should not
+be called more often than about once in 250ms.
+Returns the last measured distance in tenths of an inch, in range 0-1003. If the measurement fails, the
+sensor reports a magic number (distance) of 1003.
+last_single_shot_tenths_of_inch</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.set_mode">
+<span class="sig-name descname"><span class="pre">set_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.Mode" title="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.Mode"><span class="pre">Mode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.set_mode" title="Link to this definition"></a></dt>
+<dd><p>This function sets the sensor to the desired mode. While it’s not mandatory, it is recommended to call this
+function before accessing values from the sensor in a specific mode to prevent SensorIsNotReady exceptions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mode</strong> – desired mode to be set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.trigger_single_shot_measurement_mm">
+<span class="sig-name descname"><span class="pre">trigger_single_shot_measurement_mm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.trigger_single_shot_measurement_mm" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>SINGLESHOT_MM</cite> and triggers the measurement.
+Does not wait for the result and does not return anything.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;SINGLESHOT_MM mode:&lt;/b&gt;
+Activates once and measures the distance. After the measurement, the sensor goes to sleep and
+does not produce ultrasonic waves. This mode can be used when handling multiple ultrasonic
+sensors at the same time, to avoid interference between them. The single shot mode should not
+be called more often than about once in 250ms.
+Returns the last measured distance in mm, in range 0-2550. If the measurement fails, the
+sensor reports a magic number (distance) of 2550.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.trigger_single_shot_measurement_tenths_of_inch">
+<span class="sig-name descname"><span class="pre">trigger_single_shot_measurement_tenths_of_inch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#brian.sensors.EV3.UltrasonicSensorEV3.UltrasonicSensorEV3.trigger_single_shot_measurement_tenths_of_inch" title="Link to this definition"></a></dt>
+<dd><p>Sets the sensor mode to <cite>SINGLESHOT_TENTHS_OF_INCH</cite> and triggers the measurement.
+Does not wait for the result and does not return anything.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+</dd>
+</dl>
+<p>&lt;b&gt;SINGLESHOT_TENTHS_OF_INCH mode:&lt;/b&gt;
+Activates once and measures the distance. After the measurement, the sensor goes to sleep and
+does not produce ultrasonic waves. This mode can be used when handling multiple ultrasonic
+sensors at the same time, to avoid interference between them. The single shot mode should not
+be called more often than about once in 250ms.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-brian.sensors.EV3">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-brian.sensors.EV3" title="Link to this heading"></a></h2>
 </section>
 </section>
 
