@@ -1,3 +1,4 @@
+from enum import Enum
 from typing import Tuple
 from brian.sensors.Sensor import Sensor
 from brian.sensors.SensorPort import SensorPort
@@ -18,6 +19,31 @@ class GyroSensorEV3(Sensor):
         :param port: Sensor port to which the sensor is attached.
         """
         ...
+
+    from enum import Enum
+
+    class Mode(Enum):
+        """"""
+        ANGLE = 0
+        """"""
+        SPEED = 1
+        """"""
+        SPEED_COARSE = 2
+        """"""
+        ANGLE_AND_SPEED = 3
+        """"""
+        TILT_SPEED = 5
+        """"""
+        TILT_ANGLE = 6
+        """"""
+
+    def set_mode(self, mode: Mode) -> None:
+        """
+        This function sets the sensor to the desired mode. While it’s not mandatory, it is recommended to call this
+        function before accessing values from the sensor in a specific mode to prevent SensorIsNotReady exceptions.
+
+        :param mode: desired mode to be set
+        """
 
     def angle(self) -> int:
         """
@@ -86,7 +112,7 @@ class GyroSensorEV3(Sensor):
         """
         ...
 
-    def coarse_speed(self) -> int:
+    def speed_coarse(self) -> int:
         """
         Sets the sensor mode to `SPEED_COARSE` and returns the last value.
 

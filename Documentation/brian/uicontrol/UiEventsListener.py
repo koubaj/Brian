@@ -1,5 +1,6 @@
 from brian.uicontrol import ButtonId
 
+
 class UiEventsListener:
     """"""
 
@@ -41,7 +42,7 @@ class UiEventsListener:
         """"""
 
     class Button:
-        last_button_event: 'UiEventsListener.ButtonEvent' #Can be used for last button event without resetting it
+        last_button_event: 'UiEventsListener.ButtonEvent'  # Can be used for last button event without resetting it
         """"""
 
         def wait_for_press(self, timeout_ms: int = -1) -> bool:
@@ -49,7 +50,8 @@ class UiEventsListener:
             Waits for next button press event.
             This function is blocking.
 
-            :param timeout_ms: Maximum number of milliseconds to wait. If the timeout is negative, the function will wait indefinitely.
+            :param timeout_ms: Maximum number of milliseconds to wait.
+                - If the timeout is negative, the function will wait indefinitely.
 
             :return success:
                 - True: If the desired button event was caught.
@@ -61,7 +63,8 @@ class UiEventsListener:
             Waits for next button release event.
             This function is blocking.
 
-            :param timeout_ms: Maximum number of milliseconds to wait. If the timeout is negative, the function will wait indefinitely.
+            :param timeout_ms: Maximum number of milliseconds to wait.
+                - If the timeout is negative, the function will wait indefinitely.
 
             :return success:
                 - True: If the desired button event was caught.
@@ -73,7 +76,8 @@ class UiEventsListener:
             Waits for next button press and release event.
             This function is blocking.
 
-            :param timeout_ms: Maximum number of milliseconds to wait. If the timeout is negative, the function will wait indefinitely.
+            :param timeout_ms: Maximum number of milliseconds to wait.
+                - If the timeout is negative, the function will wait indefinitely.
 
             :return success:
                 - True: If the desired button event was caught.
@@ -81,15 +85,17 @@ class UiEventsListener:
             """
 
     class Knob(Button):
-        last_button_event: 'UiEventsListener.KnobEvent' #Can be used for last knob event without resetting it
+        last_button_event: 'UiEventsListener.KnobEvent'  # Can be used for last knob event without resetting it
         """"""
+
         def wait_for_directional_turn(self, clockwise: bool, timeout_ms: int = -1) -> bool:
             """
             Waits for next directional turn of the knob.
             This function is blocking.
 
             :param clockwise: Whether to wait for clockwise or counterclockwise turn.
-            :param timeout_ms: Maximum number of milliseconds to wait. If the timeout is negative, the function will wait indefinitely.
+            :param timeout_ms: Maximum number of milliseconds to wait.
+                - If the timeout is negative, the function will wait indefinitely.
 
             :return success:
                 - True: If the desired button event was caught.
@@ -101,7 +107,8 @@ class UiEventsListener:
             Waits for next any turn of the knob.
             This function is blocking.
 
-            :param timeout_ms: Maximum number of milliseconds to wait. If the timeout is negative, the function will wait indefinitely.
+            :param timeout_ms: Maximum number of milliseconds to wait.
+                - If the timeout is negative, the function will wait indefinitely.
 
             :return success:
                 - True: If the desired button event was caught.

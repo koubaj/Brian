@@ -1,5 +1,5 @@
-from .Sensor import Sensor
-from .SensorPort import SensorPort
+from brian.sensors.Sensor import Sensor
+from brian.sensors.SensorPort import SensorPort
 
 class UltrasonicSensorNXT(Sensor):
     """

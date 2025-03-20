@@ -1,3 +1,4 @@
+from enum import Enum
 from brian.sensors.Sensor import Sensor
 from brian.sensors.SensorPort import SensorPort
 
@@ -16,6 +17,29 @@ class UltrasonicSensorEV3(Sensor):
         :param port: Sensor port to which the sensor is attached.
         """
         ...
+
+
+    class Mode(Enum):
+        """"""
+        DISTANCE_MM = 0
+        """"""
+        DISTANCE_TENTHS_OF_INCH = 1
+        """"""
+        DETECT_OTHER_US = 2
+        """"""
+        SINGLESHOT_MM = 3
+        """"""
+        SINGLESHOT_TENTHS_OF_INCH = 4
+        """"""
+
+    def set_mode(self, mode: Mode) -> None:
+        """
+        This function sets the sensor to the desired mode. While it’s not mandatory, it is recommended to call this
+        function before accessing values from the sensor in a specific mode to prevent SensorIsNotReady exceptions.
+
+        :param mode: desired mode to be set
+        """
+
     def distance_mm(self) -> int:
         """
         Sets the sensor mode to `DISTANCE_MM` and return the last value.

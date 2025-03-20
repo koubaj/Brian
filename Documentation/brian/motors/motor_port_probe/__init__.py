@@ -24,9 +24,13 @@ class AutoDetect:
 
 
 class PortMode(Enum):
-    POWER_OFF = 0, """Disabled state"""
-    AUTOID_ONLY = 1, """Passive probing state"""
-    ANALOG_MOTOR = 2, """NXT/EV3 motor"""
+    """"""
+    POWER_OFF = 0
+    """Disabled state"""
+    AUTOID_ONLY = 1
+    """Passive probing state"""
+    ANALOG_MOTOR = 2
+    """NXT/EV3 motor"""
 
 
 class MotorPortProbe:
@@ -46,7 +50,8 @@ def probe_motor(port: 'MotorPort') -> 'MotorPortProbe':
     """
     Return latest read-only information about a motor connected to a given port. This method can be called
     any time (regardless of registered Motor port handler or if it is not registered)
-    :param: port motor port to probe.
+
+    :param port: port motor port to probe.
     :return: information about the current port usage
     """
     ...
@@ -60,8 +65,8 @@ def probe_motor_with_port_mode_hint(port: 'MotorPort', hint: 'PortMode') -> 'Mot
     class of motors to be connected, this may be useful to extract more information, for example about supported
     behavior. This method can be used only, when there is no Motor handler registered.
 
-    :param: port motor port to probe.
-    :param: PortMode target port mode. Only 'PortMode.POWER_OFF' and 'PortMode.AUTOID_ONLY' can be set manually.
+    :param port: port motor port to probe.
+    :param hint: PortMode target port mode. Only 'PortMode.POWER_OFF' and 'PortMode.AUTOID_ONLY' can be set manually.
     :return: information about the current port usage
 
     :raises MotorPortAlreadyInUse: When trying to create probe port that is already in use.

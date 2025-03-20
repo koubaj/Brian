@@ -43,11 +43,27 @@ class Sensor:
         """
         Ready-state indicates that the attempt to read values will give valid results.
         Example reasons for invalid results:
-        <ul><li>Sensor is rebooting or not initiated yet</li>
+        <ul><li>Sensor is not connected (`is_connected` returns False)</li>
+        <li>Sensor is rebooting or not initiated yet</li>
         <li>Sensor is changing modes and the change is not finished yet</li>
         <li>Connected sensor is incompatible with this handler (e.g. wrong type of sensor is connected)</li></ul>
         In all of the above cases, this function will return False.
         :return: True iff values are ready for the next read, False otherwise
+        """
+        ...
+
+    def wait_until_ready(self, timeout_ms: int = -1) -> bool:
+        """
+        Waits until the sensor is ready. This function is blocking.
+        When changing modes, the sensor enters a "not ready" state for a short period (until
+        the mode change is propagated). Therefore, it is recommended to first set the correct
+        mode using set_mode() before the calling this function. This only applies to sensors with modes.
+
+        :param timeout_ms: Maximum number of milliseconds to wait. If the timeout is negative, the function will wait indefinitely.
+
+        :return success:
+            - True: The sensor is ready.
+            - False: The sensor is not ready and time ran out.
         """
         ...
 

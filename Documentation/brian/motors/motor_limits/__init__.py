@@ -31,18 +31,18 @@ class MotorLimits:
     @property
     def torque(self) -> int:
         """
-        Query the maximum speed limit.
+        Query the torque limit.
 
-        :return: Maximum speed in degrees per second.
+        :return: Maximum torque that will be applied to the motor axle, in milli-newton-meters.
         """
         ...
 
     @torque.setter
-    def torque(self, deg_per_sec: int) -> None:
+    def torque(self, mNm: int) -> None:
         """
-        Set the maximum speed limit.
+        Set the torque limit.
 
-        :param deg_per_sec: Maximum speed in degrees per second.
+        :param mNm: Maximum torque that will be applied to the motor axle, in milli-newton-meters.
         """
         ...
 

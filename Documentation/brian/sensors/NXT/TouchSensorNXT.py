@@ -39,8 +39,6 @@ class TouchSensorNXT(Sensor):
         :return success:
             - True: If the desired button event was caught.
             - False: If the timeout ran out.
-
-        :raises brian.sensors.SensorIsNotReadyError: If the sensor is not ready.
         """
         ...
 
@@ -54,8 +52,6 @@ class TouchSensorNXT(Sensor):
         :return success:
             - True: If the desired button event was caught.
             - False: If the timeout ran out.
-
-        :raises brian.sensors.SensorIsNotReadyError: If the sensor is not ready.
         """
         ...
 
@@ -69,7 +65,5 @@ class TouchSensorNXT(Sensor):
         :return success:
             - True: If the desired button event was caught.
             - False: If the timeout ran out.
-
-        :raises brian.sensors.SensorIsNotReadyError: If the sensor is not ready.
         """
         ...

@@ -1,4 +1,4 @@
-def play_tone(tone: float, duration_ms: float):
+def play_tone(tone: int, duration_ms: int):
     """
     Play a sine tone to the audio output.
     This method returns instantly and the tone is played in the background.

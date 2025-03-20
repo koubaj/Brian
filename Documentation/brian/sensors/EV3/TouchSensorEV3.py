@@ -25,7 +25,6 @@ class TouchSensorEV3(Sensor):
         :return: True if the sensor button is pressed, False otherwise. Or False if the sensor is not ready.
 
         :raises brian.sensors.SensorIsNotReadyError: If the sensor is not ready.
-
         """
         ...
 
@@ -39,8 +38,6 @@ class TouchSensorEV3(Sensor):
         :return success:
             - True: If the desired button event was caught.
             - False: If the timeout ran out.
-
-        :raises brian.sensors.SensorIsNotReadyError: If the sensor is not ready.
         """
         ...
 
@@ -54,8 +51,6 @@ class TouchSensorEV3(Sensor):
         :return success:
             - True: If the desired button event was caught.
             - False: If the timeout ran out.
-
-        :raises brian.sensors.SensorIsNotReadyError: If the sensor is not ready.
         """
         ...
 
@@ -69,7 +64,5 @@ class TouchSensorEV3(Sensor):
         :return success:
             - True: If the desired button event was caught.
             - False: If the timeout ran out.
-
-        :raises brian.sensors.SensorIsNotReadyError: If the sensor is not ready.
         """
         ...

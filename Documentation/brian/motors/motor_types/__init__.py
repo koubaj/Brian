@@ -1,16 +1,26 @@
 from enum import Enum
 
 class DeviceClass(Enum):
+    """"""
+
     NONE = 0
+    """"""
     ERROR = 1
+    """"""
     EV3_ANALOG_MOTOR = 2
+    """"""
     EV3_UART_DEVICE = 3
+    """"""
 
 
 class DeviceType(Enum):
+    """"""
     UNKNOWN = 0
+    """"""
     NXT_EV3_LARGE_MOTOR = 7
+    """"""
     EV3_MEDIUM_MOTOR = 8
+    """"""
 class MotorType:
 
     @property
@@ -36,6 +46,7 @@ class MotorType:
 
     @property
     def default_acceleration_limit(self) -> int:
+        """"""
         ...
 
     class Identification:

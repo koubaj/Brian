@@ -19,11 +19,25 @@ class ColorSensorEV3(Sensor):
         """
         ...
 
-    class RGB:
+
+    class Mode(Enum):
+        """"""
+        REFLECT = 0
+        """"""
+        AMBIENT = 1
+        """"""
+        COLOR_DETECT = 2
+        """"""
+        REFLECT_RAW = 3
+        """"""
+        RGB_RAW = 4
+        """"""
+
+    class RawRGB:
         """
-        Class used to hold rgb values from ColorSensor.rgb_values_raw() measurement.
+        Class used to hold rgb values from ColorSensorEV3.rgb_values_raw() measurement.
         Each color channel holds values between 0-1023.
-        Attributes can be accessed either directly or using an index (RGB[0] = RGB.red)
+        Attributes can be accessed either directly or using an index (RawRGB[0] = RawRGB.red)
         """
         red: int
         """"""
@@ -38,7 +52,6 @@ class ColorSensorEV3(Sensor):
             :param green: green color component [0-1023].
             :param blue: blue color component [0-1023].
             """
-            ...
 
         def __sub__(self, other):
             """
@@ -47,6 +60,7 @@ class ColorSensorEV3(Sensor):
             If resulting element would be smaller than 0, it is set to 0
             """
             ...
+
         def __getitem__(self, item):
             """"""
             ...
@@ -72,6 +86,13 @@ class ColorSensorEV3(Sensor):
         BROWN = 7
         """"""
 
+    def set_mode(self, mode: Mode) -> None:
+        """
+        This function sets the sensor to the desired mode. While it’s not mandatory, it is recommended to call this
+        function before accessing values from the sensor in a specific mode to prevent SensorIsNotReady exceptions.
+
+        :param mode: desired mode to be set
+        """
     def reflected_value(self) -> int:
         """
         Sets the sensor mode to `REFLECT` and returns the last value.
@@ -141,7 +162,7 @@ class ColorSensorEV3(Sensor):
         """
         ...
 
-    def rgb_values_raw(self) -> RGB:
+    def rgb_values_raw(self) -> RawRGB:
         """
         Sets the sensor mode to `RGB_RAW` and return the last value.
 

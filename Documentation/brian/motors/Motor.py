@@ -63,7 +63,22 @@ class Motor:
         """
         Check if a correct motor is connected to the port and is ready to be controlled.
 
+        Test for `is_connected` is done internally, if it returns false, `is_ready` will always return false.
+
         :return: True if a motor is connected, and it is the correct type; False otherwise.
+        """
+        ...
+
+    def wait_until_ready(self, timeout_ms: Optional[int] = None) -> bool:
+        """
+        Waits until the motor is ready. This function is blocking.
+
+        :param timeout_ms: Maximum number of milliseconds to wait.
+            - If the timeout is not provided or is None, the function will wait indefinitely.
+
+        :return success:
+            - True: The sensor is ready.
+            - False: The sensor is not ready and timeout ran out.
         """
         ...
 
@@ -166,6 +181,7 @@ class Motor:
 
         :param angle: Angle to rotate by, in degrees.
         :param speed: Speed to use for the maneuver, in degrees per second.
+                      If the provided speed is negative, absolute value is used.
         :param timeout: How long to wait for the maneuver to complete, in milliseconds.
                         If zero, the function will return immediately.
                         If the timeout expires, the motor is not stopped.
@@ -179,6 +195,7 @@ class Motor:
 
         :param position: Angle to rotate to, in degrees.
         :param speed: Speed to use for the maneuver, in degrees per second.
+                      If the provided speed is negative, absolute value is used.
         :param timeout: How long to wait for the maneuver to complete, in milliseconds.
                         If zero, the function will return immediately.
                         If the timeout expires, the motor is not stopped.
@@ -207,11 +224,11 @@ class Motor:
         """
         ...
 
-    def wait_for_movement(self, timeout: Optional[int] = None) -> 'MovementEnd':
+    def wait_for_movement(self, timeout_ms: Optional[int] = None) -> 'MovementEnd':
         """
         Wait for the motor to complete the last position command.
 
-        :param timeout: How long to wait for the maneuver to complete, in milliseconds.
+        :param timeout_ms: How long to wait for the maneuver to complete, in milliseconds.
                         If zero, the function will return immediately.
                         If the timeout expires, the motor is not stopped.
         :return: Whether the wait-for-end was successful or why it ended, if it ended early.
