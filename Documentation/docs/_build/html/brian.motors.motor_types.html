@@ -160,9 +160,10 @@ Brian implements these two controllers:
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Controller.positionKp">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionKp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Controller.positionKp" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Proportional constant of the cascaded position P controller (its output is target speed in ticks/s)</p>
+<dd><p>Proportional constant of the cascaded position P controller (its output is target speed in ticks/s)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -170,9 +171,10 @@ Brian implements these two controllers:
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Controller.positionToleranceTicks">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionToleranceTicks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Controller.positionToleranceTicks" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Tolerate up to this deviation with zero output (needed for EV3 medium motor)</p>
+<dd><p>Tolerate up to this deviation with zero output (needed for EV3 medium motor)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -180,9 +182,10 @@ Brian implements these two controllers:
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Controller.speedBeta">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">speedBeta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Controller.speedBeta" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Setpoint weight in the proportional branch of the PI controller (see [1])</p>
+<dd><p>Setpoint weight in the proportional branch of the PI controller (see [1])</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -190,9 +193,10 @@ Brian implements these two controllers:
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Controller.speedKi">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">speedKi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Controller.speedKi" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Integral constant of the speed PI controller</p>
+<dd><p>Integral constant of the speed PI controller</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -200,9 +204,10 @@ Brian implements these two controllers:
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Controller.speedKp">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">speedKp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Controller.speedKp" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Proportional constant of the speed PI controller</p>
+<dd><p>Proportional constant of the speed PI controller</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -218,9 +223,10 @@ This model can be used for estimating various internal states of the motor.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Motor.B_NmPerRadPerSec">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">B_NmPerRadPerSec</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Motor.B_NmPerRadPerSec" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Friction constant, in N*m/(rad/sec)</p>
+<dd><p>Friction constant, in N*m/(rad/sec)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -228,9 +234,10 @@ This model can be used for estimating various internal states of the motor.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Motor.Cp_Farad">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Cp_Farad</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Motor.Cp_Farad" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Capacity of a EMI-eliminating capacitor across motor terminals, in farads</p>
+<dd><p>Capacity of a EMI-eliminating capacitor across motor terminals, in farads</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -238,9 +245,10 @@ This model can be used for estimating various internal states of the motor.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Motor.Kb_VPerRadPerSec">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Kb_VPerRadPerSec</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Motor.Kb_VPerRadPerSec" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Torque constant in V/(rad/sec)</p>
+<dd><p>Torque constant in V/(rad/sec)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -248,9 +256,10 @@ This model can be used for estimating various internal states of the motor.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Motor.Kt_NmPerA">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Kt_NmPerA</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Motor.Kt_NmPerA" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Torque constant, in N*m/A</p>
+<dd><p>Torque constant, in N*m/A</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -258,9 +267,10 @@ This model can be used for estimating various internal states of the motor.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Motor.L_Henry">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">L_Henry</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Motor.L_Henry" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Armature inductance, in henry</p>
+<dd><p>Armature inductance, in henry</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -268,9 +278,10 @@ This model can be used for estimating various internal states of the motor.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Motor.R_Ohm">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">R_Ohm</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Motor.R_Ohm" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Armature resistance, in ohms</p>
+<dd><p>Armature resistance, in ohms</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -278,9 +289,10 @@ This model can be used for estimating various internal states of the motor.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Motor.Udeadzone_Volts">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Udeadzone_Volts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Motor.Udeadzone_Volts" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Voltage needed to make the motor moves</p>
+<dd><p>Voltage needed to make the motor moves</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -288,9 +300,10 @@ This model can be used for estimating various internal states of the motor.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Motor.ticksPerRevolution">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ticksPerRevolution</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Motor.ticksPerRevolution" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Number of encoder ticks per one revolution.</p>
+<dd><p>Number of encoder ticks per one revolution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -316,9 +329,10 @@ value using real measurements (when they’re available).</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Observer.Current.measurementWeight_pct">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">measurementWeight_pct</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Observer.Current.measurementWeight_pct" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Correction step: How much weight to give to measurements vs. model prediction</p>
+<dd><p>Correction step: How much weight to give to measurements vs. model prediction</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -326,9 +340,10 @@ value using real measurements (when they’re available).</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.DefaultConstants.Observer.Current.minimumPwmOnTime_pct">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">minimumPwmOnTime_pct</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.DefaultConstants.Observer.Current.minimumPwmOnTime_pct" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Only trust measurements if the PWM has at least this duty cycle</p>
+<dd><p>Only trust measurements if the PWM has at least this duty cycle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -395,9 +410,10 @@ of the loop.
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.Identification.device_class">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">device_class</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.motors.motor_types.DeviceType" title="brian.motors.motor_types.DeviceType"><span class="pre">DeviceType</span></a></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.Identification.device_class" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>More detailed device type</p>
+<dd><p>More detailed device type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -405,9 +421,10 @@ of the loop.
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.Identification.device_type">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">device_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.motors.motor_types.DeviceClass" title="brian.motors.motor_types.DeviceClass"><span class="pre">DeviceClass</span></a></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.Identification.device_type" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Detected device class (portMode must not be POWER_OFF)</p>
+<dd><p>Detected device class (portMode must not be POWER_OFF)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -422,9 +439,10 @@ of the loop.
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.default_constants">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_constants</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.motors.motor_types.MotorType.DefaultConstants" title="brian.motors.motor_types.MotorType.DefaultConstants"><span class="pre">DefaultConstants</span></a></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.default_constants" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Default controller configuration</p>
+<dd><p>Default controller configuration</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -432,9 +450,10 @@ of the loop.
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.identification">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">identification</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#brian.motors.motor_types.MotorType.Identification" title="brian.motors.motor_types.MotorType.Identification"><span class="pre">Identification</span></a></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.identification" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>What will Brian report as the ID when this motor is connected</p>
+<dd><p>What will Brian report as the ID when this motor is connected</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>
@@ -442,9 +461,10 @@ of the loop.
 <dl class="py property">
 <dt class="sig sig-object py" id="brian.motors.motor_types.MotorType.name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#brian.motors.motor_types.MotorType.name" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Human-readable name of the motor</p>
+<dd><p>Human-readable name of the motor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return</p>
 </dd>
 </dl>
 </dd></dl>

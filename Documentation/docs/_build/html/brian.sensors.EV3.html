@@ -296,13 +296,11 @@ The measurement is corrected for the ambient light change.</p>
 <dd><p>Sets the sensor mode to <cite>RGB_RAW</cite> and return the last value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>RGB raw values (0-1023 each channel).</p>
+<dd class="field-odd"><p>RGB raw values (0-1023 each channel).
+You can access them with RGB.red, RGB.green and RGB.blue, or by using subscription (RGB[0], RGB[1], …)</p>
 </dd>
-</dl>
-<p>You can access them with RGB.red, RGB.green and RGB.blue, or by using subscription (RGB[0], RGB[1], …)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="brian.sensors.html#brian.sensors.SensorIsNotReadyError" title="brian.sensors.SensorIsNotReadyError"><strong>brian.sensors.SensorIsNotReadyError</strong></a> – If the sensor is not ready.</p>
 </dd>
 </dl>
 <p>&lt;b&gt;RGB_RAW mode:&lt;/b&gt;

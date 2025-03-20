@@ -37,8 +37,10 @@ class BrianBrianComm(Sensor):
         :return: read bytes
 
         :raises OSError: If an error occurs during the write operation.
-        <br>**Error Codes:**<ul>
-            <li>`MP_EIO`: BrianBrianComm is not ready or is disconnected.</li>
+
+        <br>**Error Codes:** </br>
+        <ul>
+        <li>`MP_EIO`: BrianBrianComm is not ready or is disconnected.</li>
         </ul>
         """
         ...
@@ -52,8 +54,10 @@ class BrianBrianComm(Sensor):
         :return: number of bytes written
 
         :raises OSError: If an error occurs during the write operation.
-        <br>**Error Codes:**<ul>
-            <li>`MP_EIO`: BrianBrianComm is not ready or is disconnected.</li>
+
+        <br>**Error Codes:** </br>
+        <ul>  
+        <li>`MP_EIO`: BrianBrianComm is not ready or is disconnected.</li>
         </ul>
 
         """

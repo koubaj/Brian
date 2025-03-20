@@ -64,7 +64,7 @@ def set_button_led(target: Union[ButtonId, UiEventsListener.Button, UiEventsList
     by the `PhysButtonOverlay` and the default os button effect, unless `LedButtonAnimation.inherit` is used.
 
     :param target: Target button to change color. When Using UiEventsListener.any_button and
-    UiEventsListener.any_button_incl_knob, all respective buttons change color/animation.
+        UiEventsListener.any_button_incl_knob, all respective buttons change color/animation.
     :param animation: Target animation.
     :param color: Target color. When unfilled default color from settings is used.
     """

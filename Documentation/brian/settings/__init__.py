@@ -1,8 +1,9 @@
 def set_volume(percent: float) -> None:
     """
     Set current volume
+
     :param percent: Percentage of the maximum volume to apply. The value will be clipped to range 0% ~ 100%.
-    The volume will not be set higher, than the one set in the settings in main menu.
+        The volume will not be set higher, than the one set in the settings in main menu.
     """
 
 
@@ -21,8 +22,9 @@ def get_preferred_volume() -> float:
 def set_lcd_brightness(percent: float) -> None:
     """
     Set current lcd brightness
+    
     :param percent: Percentage of the maximum brightness to apply. The value will be clipped to range 1% ~ 100%.
-    The brightness will not be set higher, than the one set in the settings in main menu.
+        The brightness will not be set higher, than the one set in the settings in main menu.
     """
 
 
@@ -41,7 +43,7 @@ def get_preferred_lcd_brightness() -> float:
 def enable_os_button_sounds(enable: bool) -> None:
     """
     :param enable: Whether to enable or disable os click sounds.
-    Works only if OS is not muted in the settings in main menu.
+        Works only if OS is not muted in the settings in main menu.
     """
 
 

@@ -484,12 +484,14 @@ This function is blocking.</p>
 by the <cite>PhysButtonOverlay</cite> and the default os button effect, unless <cite>LedButtonAnimation.inherit</cite> is used.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>target</strong> – Target button to change color. When Using UiEventsListener.any_button and</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – Target button to change color. When Using UiEventsListener.any_button and
+UiEventsListener.any_button_incl_knob, all respective buttons change color/animation.</p></li>
+<li><p><strong>animation</strong> – Target animation.</p></li>
+<li><p><strong>color</strong> – Target color. When unfilled default color from settings is used.</p></li>
+</ul>
 </dd>
 </dl>
-<p>UiEventsListener.any_button_incl_knob, all respective buttons change color/animation.
-:param animation: Target animation.
-:param color: Target color. When unfilled default color from settings is used.</p>
 </dd></dl>
 
 </section>

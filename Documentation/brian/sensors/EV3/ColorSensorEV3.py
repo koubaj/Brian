@@ -167,7 +167,7 @@ class ColorSensorEV3(Sensor):
         Sets the sensor mode to `RGB_RAW` and return the last value.
 
         :return: RGB raw values (0-1023 each channel).
-        You can access them with RGB.red, RGB.green and RGB.blue, or by using subscription (RGB[0], RGB[1], ...)
+            You can access them with RGB.red, RGB.green and RGB.blue, or by using subscription (RGB[0], RGB[1], ...)
 
         :raises brian.sensors.SensorIsNotReadyError: If the sensor is not ready.
 
